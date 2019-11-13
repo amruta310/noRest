@@ -23,7 +23,7 @@ let eventSchema = new Schema({
         required: "date is required"
     },
     amount: {
-        type: Decimal128,
+        type: Number,
         required: "amount is required"
     }
 }, {

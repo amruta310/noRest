@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 /**
  * mongoose instance connection url connection
  */
-mongoose.connect('mongodb+srv://AlishaMehta:mongodb@123@norest-t8upz.mongodb.net/noRestData?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.connect('mongodb+srv://AlishaMehta:mongodb@123@noRest-t8upz.mongodb.net/noRest?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false});
 mongoose.connection.on('connected', function(){
     console.log("Mongo DB is connected");
     //Initialize app
