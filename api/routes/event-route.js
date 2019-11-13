@@ -1,15 +1,15 @@
 
 'use strict';
 module.exports = function (app) {
-    const Controller = require('../controllers/event_controller');
+    const eventController = require('../controllers/event-controller');
     
-    app.route('/event')
-        .get(Controller.list)
-        .post(Controller.post);
+    app.route('/events')
+        .get(eventController.list)
+        .post(eventController.post);
 
  
-    app.route('/event/:id')
-        .get(Controller.get)
-        .put(Controller.put)
-        .delete(Controller.delete);
+    app.route('/events/:id')
+        .get(eventController.get)
+        .put(eventController.put)
+        .delete(eventController.delete);
 };

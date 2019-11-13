@@ -33,6 +33,7 @@ exports.list = function (request, response) {
  */
 exports.post = function (request, response) {
     const newUser = Object.assign({}, request.body);
+    console.log('request.body ==== ' + request.body);
     const resolve = (user) => {
         response.status(200);
         response.json(user);

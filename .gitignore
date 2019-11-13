@@ -1,0 +1,12 @@
+.#*
+*~
+*#
+#*
+*.log
+**/npm-cache
+/dist
+/docs
+package-lock.json
+.esdoc.json
+# dependencies
+/node_modules

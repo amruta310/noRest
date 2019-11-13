@@ -2,15 +2,15 @@
 
 'use strict';
 module.exports = function (app) {
-    const Controller = require('../controllers/animal_controller');
+    const animalController = require('../controllers/animal-controller');
     
     app.route('/animals')
-        .get(Controller.list)
-        .post(Controller.post);
+        .get(animalController.list)
+        .post(animalController.post);
 
  
     app.route('/animals/:id')
-        .get(Controller.get)
-        .put(Controller.put)
-        .delete(Controller.delete);
+        .get(animalController.get)
+        .put(animalController.put)
+        .delete(animalController.delete);
 };

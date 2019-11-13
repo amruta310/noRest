@@ -2,15 +2,14 @@
 
 'use strict';
 module.exports = function (app) {
-    const Controller = require('../controllers/user_controller');
-    
-    app.route('/user')
-        .get(Controller.list)
-        .post(Controller.post);
+    const userController = require('../controllers/user-controller');
+    app.route('/users')
+        .get(userController.list)
+        .post(userController.post);
 
  
-    app.route('/user/:id')
-        .get(Controller.get)
-        .put(Controller.put)
-        .delete(Controller.delete);
+    app.route('/users/:id')
+        .get(userController.get)
+        .put(userController.put)
+        .delete(userController.delete);
 };
