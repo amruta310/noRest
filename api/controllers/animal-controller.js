@@ -1,95 +1,95 @@
 /**
- * Controller for user endpoints.
+ * Controller for animal endpoints.
  */
 
 'use strict';
 /**
- * Import user service
+ * Import animal service
  */
-const userService = require('../services/user-service');
+const animalService = require('../services/animal-service');
 /**
- * Returns a list of user in JSON based on the
+ * Returns a list of animal in JSON based on the
  * search parameters.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.list = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (animal) => {
         response.status(200);
-        response.json(user);
+        response.json(animal);
     };
-    userService.search({})
+    animalService.search({})
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Creates a new user with the request JSON and
- * returns user JSON object.
+ * Creates a new animal with the request JSON and
+ * returns animal JSON object.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.post = function (request, response) {
-    const newUser = Object.assign({}, request.body);
-    const resolve = (user) => {
+    const newanimal = Object.assign({}, request.body);
+    const resolve = (animal) => {
         response.status(200);
-        response.json(user);
+        response.json(animal);
     };
-    userService.save(newUser)
+    animalService.save(newanimal)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Returns a user object in JSON.
+ * Returns a animal object in JSON.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.get = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (animal) => {
         response.status(200);
-        response.json(user);
+        response.json(animal);
     };
-    userService.get(request.params.id)
+    animalService.get(request.params.id)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Updates and returns a user object in JSON.
+ * Updates and returns a animal object in JSON.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.put = function (request, response) {
-    const user = Object.assign({}, request.body);
-    const resolve = (user) => {
+    const animal = Object.assign({}, request.body);
+    const resolve = (animal) => {
         response.status(200);
-        response.json(user);
+        response.json(animal);
     };
-    user._id = request.params.id;
-    userService.update(user)
+    animal._id = request.params.id;
+    animalService.update(animal)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Deletes a user object.
+ * Deletes a animal object.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.delete = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (animal) => {
         response.status(200);
         response.json({
-            message: 'User Successfully deleted'
+            message: 'animal Successfully deleted'
         });
     };
-    userService.delete(request.params.id)
+    animalService.delete(request.params.id)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };

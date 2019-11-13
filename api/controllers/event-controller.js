@@ -1,95 +1,95 @@
 /**
- * Controller for user endpoints.
+ * Controller for event endpoints.
  */
 
 'use strict';
 /**
- * Import user service
+ * Import event service
  */
-const userService = require('../services/user-service');
+const eventService = require('../services/event-service');
 /**
- * Returns a list of user in JSON based on the
+ * Returns a list of event in JSON based on the
  * search parameters.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.list = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (event) => {
         response.status(200);
-        response.json(user);
+        response.json(event);
     };
-    userService.search({})
+    eventService.search({})
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Creates a new user with the request JSON and
- * returns user JSON object.
+ * Creates a new event with the request JSON and
+ * returns event JSON object.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.post = function (request, response) {
-    const newUser = Object.assign({}, request.body);
-    const resolve = (user) => {
+    const newEvent = Object.assign({}, request.body);
+    const resolve = (event) => {
         response.status(200);
-        response.json(user);
+        response.json(event);
     };
-    userService.save(newUser)
+    eventService.save(newEvent)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Returns a user object in JSON.
+ * Returns a event object in JSON.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.get = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (event) => {
         response.status(200);
-        response.json(user);
+        response.json(event);
     };
-    userService.get(request.params.id)
+    eventService.get(request.params.id)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Updates and returns a user object in JSON.
+ * Updates and returns a event object in JSON.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.put = function (request, response) {
-    const user = Object.assign({}, request.body);
-    const resolve = (user) => {
+    const event = Object.assign({}, request.body);
+    const resolve = (event) => {
         response.status(200);
-        response.json(user);
+        response.json(event);
     };
-    user._id = request.params.id;
-    userService.update(user)
+    event._id = request.params.id;
+    eventService.update(event)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
 
 /**
- * Deletes a user object.
+ * Deletes a event object.
  *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
 exports.delete = function (request, response) {
-    const resolve = (user) => {
+    const resolve = (event) => {
         response.status(200);
         response.json({
-            message: 'User Successfully deleted'
+            message: 'event Successfully deleted'
         });
     };
-    userService.delete(request.params.id)
+    eventService.delete(request.params.id)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
