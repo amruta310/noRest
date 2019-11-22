@@ -15,7 +15,7 @@ let commentSchema = new Schema({
         ref: 'Users',
         required: "userId is required"
     },
-    AnimalId: {
+    animalId: {
         type: Schema.Types.ObjectId,
         ref: 'Animals',
         required: "AnimalId is required"

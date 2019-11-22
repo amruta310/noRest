@@ -6,6 +6,7 @@ const mongoose = require('mongoose'),
 
     exports.search = function (params) {
         const promise = Animal.find(params).exec();
+        console.log(Animal.find(params).exec());
         return promise;
     };
 
