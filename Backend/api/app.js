@@ -10,6 +10,7 @@ module.exports = function (app) {
     let commentSchema = require('./models/commentSchema');
     let paymentSchema = require('./models/paymentSchema');
     //Initialize routes
+    console.log('app.js');
     let animalRoutes = require('./routes/animal-route');
     let eventRoutes = require('./routes/event-route');
     let userRoutes = require('./routes/user-route');

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+      <div *ngIf="animals" >
+        <div *ngFor="let animal of animals">
+          <img [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)" style="height:500px; width:20%">
+          <br>
+          <input type=text>
+          <button type="button"name="comment">Comment</button>
+      </div>
+    </div>
+  </body>
+</html>
