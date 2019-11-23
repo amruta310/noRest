@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EventListComponent } from './event-list/event-list.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardViewComponent },
+  // { path: '', component: DashboardViewComponent },
   { path: 'events', component: EventListComponent },
 ];
 
