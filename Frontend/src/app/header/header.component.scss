@@ -1,0 +1,48 @@
+
+.container{
+  background-color: #F0F0F0;
+  height: 55px;
+  margin: -10px;
+  .logoDiv{
+    float: left;
+  }
+  .example-button-row{
+    .rightDiv:hover {
+      background-color: rgba(300, 53, 15, 1);
+    }
+    .rightDiv{
+      background-color: rgba(240, 53, 15, 1);
+      width: 230px;
+      height: 55px;
+      float: right;
+      margin-right: 10px;
+      border-radius: 5px;
+      .favIcon{
+        color: white;
+        float: left;
+        float: left;
+        margin: 15px;
+      }
+      .donateNow{
+        color: white;
+        margin-top: 8px;
+        margin-left: 65px;
+      }
+    }
+    .signUpBtn{
+      padding-bottom: 9px;
+      padding-top: 10px;
+      padding-left: 50px;
+      padding-right: 50px;
+      float: right;
+    }
+  }
+}
+.mat-icon-button.mat-warn .mat-button-focus-overlay {
+  background-color: transparent;
+}
+.tp-button-row button,
+.tp-button-row a {
+   margin-right: 8px;
+}
+
