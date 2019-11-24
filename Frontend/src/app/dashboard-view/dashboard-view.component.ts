@@ -16,45 +16,41 @@ window.sanitizer = window.sanitizer || {};
 })
 export class DashboardViewComponent {
 
-  animals: object;
-  comments: object;
+  animals: Array<object>;
+  comments: Array<object>;
   animalIds: string[];
   imageUrl: Binary;
   imageDisplay: SafeResourceUrl;
   count: number;
+  animalCommentMap = new Map();
 
-  constructor(private _http : HttpService, private sanitizer: DomSanitizer) {
+  constructor(private _http : HttpService, public sanitizer: DomSanitizer) {
     this.count = 0;
   }
 
   ngOnInit() {
-    let animalCommentMap = new Map();
     this._http.getAnimals().subscribe(data => {
-      console.log(data.length);
       this.animals = data;
+      this._http.getComments().subscribe(data => {
+        this.comments = data;
+
+        // tslint:disable-next-line: prefer-for-of
+        for (let anm of Object.keys(this.animals)) {
+          this.animalCommentMap.set(this.animals[anm], null);
+          for (let comm of Object.keys(this.comments)) {
+            if (this.animals[anm]._id == this.comments[comm].animalId) {
+              if(this.comments[comm].comment != null){
+                this.animalCommentMap.set(this.animals[anm], this.comments[comm]);
+              }
+            }
+          }
+        }
+        console.log(this.animalCommentMap);
+      });
     });
+  }
 
-    this._http.getComments().subscribe(data => {
-      this.comments = data;
-      console.log(this.comments);
+  updateComment() {
 
-    //   this.comments.[Symbol.iterator] = function* () {
-    //     let properties = Object.keys(this);
-    //     for (let comm of properties) {
-    //     }
-    // }
-
-    //   for(let comm of this.comments){
-
-    //   }
-    //   for (const key in Object.keys(this.animals)) {
-    //     if (key != null) {
-    //       for (const key1 in Object.keys(this.comments)) {
-
-    //       }
-    //     }
-    //   }
-
-    });
   }
 }
