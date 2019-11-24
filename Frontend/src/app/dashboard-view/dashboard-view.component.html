@@ -2,12 +2,20 @@
 <html>
   <head></head>
   <body>
-      <div *ngIf="animals" >
-        <div *ngFor="let animal of animals">
-          <img [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)" style="height:500px; width:20%">
+    <div *ngIf="animals" >
+      <div *ngFor="let recipient of animalCommentMap | keyvalue">
+          <img [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+recipient.key.image)" style="height:500px; width:20%">
           <br>
-          <input type=text>
-          <button type="button"name="comment">Comment</button>
+          <br>
+          <div *ngIf="recipient.value; else elseBlock" >
+              <input type="text" value="{{ recipient.value.comment }}" disabled>
+          </div>
+          <ng-template #elseBlock>
+              <input type="text"  value="" > &nbsp;&nbsp;
+              <button type="button"name="comment" (click)="updateComment()">Comment</button>
+          </ng-template>
+          <br>
+          <br>
       </div>
     </div>
   </body>
