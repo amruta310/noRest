@@ -13,12 +13,12 @@ let commentSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'Users',
-        required: "userId is required"
+        //required: "userId is required"
     },
     animalId: {
         type: Schema.Types.ObjectId,
         ref: 'Animals',
-        required: "AnimalId is required"
+        //required: "AnimalId is required"
     }
 }, {
     versionKey: false
@@ -33,5 +33,4 @@ commentSchema.virtual('id').get(function(){
 commentSchema.set('toJSON', {
     virtuals: true
 });
-
 module.exports = mongoose.model('Comments', commentSchema);

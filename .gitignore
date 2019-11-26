@@ -10,3 +10,4 @@ package-lock.json
 .esdoc.json
 # dependencies
 /node_modules
+.vscode

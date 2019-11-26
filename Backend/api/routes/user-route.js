@@ -7,9 +7,10 @@ module.exports = function (app) {
         .get(userController.list)
         .post(userController.post);
 
+    app.route('/users/:username')
+        .get(userController.get)
  
     app.route('/users/:id')
-        .get(userController.get)
         .put(userController.put)
         .delete(userController.delete);
 };

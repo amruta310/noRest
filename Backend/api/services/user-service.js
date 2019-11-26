@@ -35,8 +35,8 @@ exports.save = function (user) {
  *
  * @param {string} userId {Id of the user object}
  */
-exports.get = function (userId) {
-    const promise = Users.findById(userId).exec();
+exports.get = function () {
+    const promise = Users.find().exec();
     return promise;
 };
 

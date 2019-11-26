@@ -11,8 +11,12 @@
               <input type="text" value="{{ recipient.value.comment }}" disabled>
           </div>
           <ng-template #elseBlock>
-              <input type="text"  value="" > &nbsp;&nbsp;
-              <button type="button"name="comment" (click)="updateComment()">Comment</button>
+              <form #userForm="ngForm" (ngSubmit)="updateComment(userForm.value, recipient)">
+                <input #inputComm type="text" [(ngModel)]="comment" name="comment" [disabled]="inputDisabled"> &nbsp;&nbsp;
+                <div *ngIf="inputDisabled == false">
+                    <button name="submit">Comment</button>
+                </div>
+              </form>
           </ng-template>
           <br>
           <br>
