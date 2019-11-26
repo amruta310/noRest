@@ -7,7 +7,16 @@
         <div class="donateNow">Donate Now</div>
       </button>
     </div>
-    <button mat-button class="signUpBtn" (click)="openSignUp()">Sign Up</button>
-    <button mat-button class="loginBtn" (click)="openLogin()">Login</button>
+    <div *ngIf="signIn">
+      <button mat-button class="signUpBtn" (click)="openSignUp()">Sign Up</button>
+      <button mat-button class="loginBtn" (click)="openLogin()">Login</button>
+    </div>
+    <div *ngIf="signIn == false">
+        {{username}}
+        <button mat-button class="signOutBtn" (click)="onSignOut()">Sign Out</button>
+    </div>
+    <div *ngIf="openSignUpPage">
+      <app-sign-up (outputUser)="getOutputUser($event)"></app-sign-up>
+    </div>
   </div>
 </div>

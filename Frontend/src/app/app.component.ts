@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +6,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frontend';
+  openDashboardPage: boolean;
+  loggedInUser: object;
+
   constructor() {}
+
+  getDashboard(event) {
+    this.openDashboardPage = true;
+    this.loggedInUser = event;
+  }
 }

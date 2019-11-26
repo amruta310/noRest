@@ -9,8 +9,8 @@ const mongoose = require('mongoose'),
         return promise;
     };
 
-    exports.save = function (Comment) {
-        const newComment = new Comment(Comment);
+    exports.save = function (comment) {
+        const newComment = new Comment(comment);
         const promise = newComment.save();
         return promise;
     };

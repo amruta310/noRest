@@ -1,5 +1,6 @@
+import { SignUpComponent } from './../sign-up/sign-up.component';
 import { SharedService } from '../shared.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
@@ -7,18 +8,38 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  openSignUpPage: boolean;
+  signIn: boolean;
+  username: string;
+  @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
 
-  constructor(private popup: SharedService, private _router: Router) { }
+  constructor(private popup: SharedService, private _router: Router) {
+    this.username = "";
+    this.signIn = true;
+   }
 
   ngOnInit() {
   }
 
   openSignUp() {
-    this._router.navigate(['/signUpOrLogin' + '/SignUp']);
+    //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
+    this.openSignUpPage = true;
   }
 
   openLogin() {
-    this._router.navigate(['/signUpOrLogin' + '/Login']);
+    //this._router.navigate(['/signUpOrLogin' + '/Login']);
+    this.openSignUpPage = true;
   }
 
+  getOutputUser(event) {
+    this.openSignUpPage = false;
+    this.signIn = false;
+    this.goodToload.emit(event);
+    this.username = "Welcome " + event.username;
+  }
+
+  onSignOut() {
+    //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
+    this.signIn = true;
+  }
 }
