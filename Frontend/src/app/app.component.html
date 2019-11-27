@@ -3,8 +3,10 @@
 </header>
 
 <div class="container">
+    <app-home></app-home>
   <div *ngIf="openDashboardPage">
     <app-dashboard-view [loggedInUser]="loggedInUser"></app-dashboard-view>
+    
   </div>
   <router-outlet></router-outlet>
 </div>
