@@ -1,0 +1,12 @@
+.grid2
+ {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: 100px 200px 200px;
+     grid-gap:5px;
+     overflow: hidden;                                   /*this will hide the over flowing content of a grid and will not show that extra */
+     align-content: center;                              /*aligns al the content of page to center */
+     background-color: white;
+     
+     
+ }

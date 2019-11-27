@@ -18,6 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { InActionComponent } from './HomeComponents/in-action/in-action.component';
+import { DonationImpactComponent } from './HomeComponents/donation-impact/donation-impact.component';
+import { OurMissionComponent } from './HomeComponents/our-mission/our-mission.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HomeComponent,
     AboutUsComponent,
     ContactUsComponent,
+    InActionComponent,
+    DonationImpactComponent,
+    OurMissionComponent,
   ],
   imports: [
     BrowserModule,
