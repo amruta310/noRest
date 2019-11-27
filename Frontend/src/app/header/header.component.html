@@ -10,6 +10,7 @@
     <div *ngIf="signIn">
       <button mat-button class="signUpBtn" (click)="openSignUp()">Sign Up</button>
       <button mat-button class="loginBtn" (click)="openLogin()">Login</button>
+      <a mat-button class="loginBtn" routerLink="/animal">Animal</a>
     </div>
     <div *ngIf="signIn == false">
         {{username}}

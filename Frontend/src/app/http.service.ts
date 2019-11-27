@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 import { AnimalSchema } from './../../../Backend/api/models/animalSchema';
 import { EventSchema } from './../../../Backend/api/models/eventSchema';
+import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Comments } from './../../../Backend/api/models/commentSchema';
 import { User } from './../../../Backend/api/models/userSchema';
+const httpOptions={
+  headers:new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +21,11 @@ export class HttpService {
   private userUrl = 'http://localhost:3000/users';
 
   constructor(public _http: HttpClient) { }
+  gettodos():Observable<AnimalSchema[]>
+  {
+    return this._http.get<AnimalSchema[]>(this.animalUrl);
 
+  }
   getAnimals() {
     return this._http.get<AnimalSchema[]>(this.animalUrl);
   }

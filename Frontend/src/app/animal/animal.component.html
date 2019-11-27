@@ -1,0 +1,28 @@
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Animal</button>
+  </div>
+</div> -->
+
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+      <div class="pull-left" class="list-group-item clearfix" *ngFor="let animal of animals">
+        <h1>{{ animal.name }}</h1>
+        <a routerLink="/animaleach" class="list-group-item-heading">{{ animal.name }}</a>
+        <p class="list-group-item-text">{{ animal.specification }}</p>
+
+      <span class="pull-right">
+        <img
+          [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
+          alt="{{ animal.name }}"
+          class="dogimg"
+          style="max-height: 150px;">
+      </span>
+    </div>
+    <!-- <app-recipe-item></app-recipe-item> -->
+    <!-- <app-animal-each></app-animal-each> -->
+  </div>
+</div>
+
+
