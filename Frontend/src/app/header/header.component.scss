@@ -2,7 +2,8 @@
 .container{
   background-color: #F0F0F0;
   height: 55px;
-  margin: -10px;
+  margin: 0px;
+  width: 100%;
   .logoDiv{
     float: left;
   }
@@ -19,7 +20,6 @@
       border-radius: 5px;
       .favIcon{
         color: white;
-        float: left;
         float: left;
         margin: 15px;
       }
