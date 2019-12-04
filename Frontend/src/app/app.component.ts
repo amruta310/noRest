@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Frontend';
+  title = 'Pawfect';
   openDashboardPage: boolean;
   loggedInUser: object;
 

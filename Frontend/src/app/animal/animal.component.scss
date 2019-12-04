@@ -1,3 +1,38 @@
+
 .dogimage{
   width: 100%;
 }
+.card {
+  max-width: 300px;
+  margin: auto;
+  //text-align: center;
+  font-family: arial;
+}
+.animalheader{
+  font-family: monospace;
+  font-size: 35px;
+  font-weight: small;
+  height: 40%;
+  width: 50%;
+  background-color:  rgb(196, 32, 32);
+}
+.animaldesc{
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: small;
+}
+a:link, a:visited {
+  background-color: rgb(196, 32, 32);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:rgb(238, 227, 227);
+}
+
+
+
