@@ -21,6 +21,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AnimalComponent } from './animal/animal.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { HomecontentComponent } from './homecontent/homecontent.component';
+<<<<<<< HEAD
+import { OurMissionComponent } from './FirstPage Components/our-mission/our-mission.component';
+import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
+import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
+=======
+>>>>>>> 2a3bc40b92543fc919bfaa5a6c1b15b3bd7f7a70
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { HomecontentComponent } from './homecontent/homecontent.component';
     AnimalComponent,
     AnimalEachComponent,
     HomecontentComponent,
+<<<<<<< HEAD
+    OurMissionComponent,
+    InActionComponent,
+    DonationImpactComponent,
+=======
+>>>>>>> 2a3bc40b92543fc919bfaa5a6c1b15b3bd7f7a70
   ],
   imports: [
     BrowserModule,
