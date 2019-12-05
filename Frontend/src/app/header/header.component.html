@@ -15,13 +15,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
           <!-- <ul class="item"> -->
-        <li><a [routerLink]="['/animal']">
+        <li><a [routerLink]="['/animal']" (click)="setShowMe()">
           Adopt
         </a></li>
-        <li> <a [routerLink]="['/orderhistory']">
+        <li> <a [routerLink]="['/orderhistory']" (click)="setShowMe()">
             About Us
           </a></li>
-        <li><a [routerLink]="['/user-review-list']">
+        <li><a [routerLink]="['/user-review-list']" (click)="setShowMe()">
             Events
           </a></li>
       </ul>
@@ -78,4 +78,6 @@
     </div>
   </div>
 </nav>
-<app-homecontent></app-homecontent>
+<div *ngIf="showMe">
+  <app-homecontent></app-homecontent>
+</div>

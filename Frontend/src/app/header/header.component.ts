@@ -14,9 +14,11 @@ export class HeaderComponent implements OnInit {
   signIn: boolean;
   username: string;
   donations:Donation[];
+  showMe: boolean;
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
 
   constructor(private popup: SharedService, private _router: Router) {
+    this.showMe= true;
     this.username = "";
     this.signIn = true;
    }
@@ -51,4 +53,7 @@ export class HeaderComponent implements OnInit {
   //     this.donations.push(donation);
   //   })
   // }
+  setShowMe(){
+    this.showMe=false;
+  }
 }
