@@ -5,22 +5,22 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    font-display: arial;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .heading
 {
-   
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .heading::after{
-  background: #d52b1e;
-    content: "'";
-    display: block;
-    height: 4px;
-    margin: 15px auto 0;
-    text-indent: -9999px;
-    width: 44px;
+    background: #d52b1e;
+      content: "'";
+      display: block;
+      height: 4px;
+      margin: 15px auto 0;
+      text-indent: -9999px;
+      width: 44px;
 }
 
 .column_inner

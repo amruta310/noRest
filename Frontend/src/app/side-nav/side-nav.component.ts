@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
+  public show: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+toggle() {
+  this.show = !this.show;
+  }
 }

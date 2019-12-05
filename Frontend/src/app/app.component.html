@@ -1,12 +1,20 @@
+
 <header>
-  <app-header (goodToload)="getDashboard($event)"></app-header>
+  <app-header (goodToload)="getDashboard($event)" class="header"></app-header>
+  <!-- <app-side-nav></app-side-nav> -->
 </header>
 
-<div class="container">
+<div>
     <app-home></app-home>
+</div>
+<div class="container">
+    
   <div *ngIf="openDashboardPage">
     <app-dashboard-view [loggedInUser]="loggedInUser"></app-dashboard-view>
     
   </div>
+  
   <router-outlet></router-outlet>
 </div>
+
+

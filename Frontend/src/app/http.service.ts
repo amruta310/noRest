@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
 import { AnimalSchema } from './../../../Backend/api/models/animalSchema';
 import { EventSchema } from './../../../Backend/api/models/eventSchema';
+import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Comments } from './../../../Backend/api/models/commentSchema';
 import { User } from './../../../Backend/api/models/userSchema';
+import { Donation } from './models/Donation';
+const httpOptions={
+  headers:new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -12,9 +20,18 @@ export class HttpService {
   private eventUrl = 'http://localhost:3000/events';
   private commentUrl = 'http://localhost:3000/comments';
   private userUrl = 'http://localhost:3000/users';
+  //private donationUrl = 'http://localhost:3000/donation';
 
   constructor(public _http: HttpClient) { }
+  // addDonation(donation:Donation):Observable<Donation>
+  // {
+  //   return this._http.post<Donation>(this.donationUrl,donation);
+  // }
+  gettodos():Observable<AnimalSchema[]>
+  {
+    return this._http.get<AnimalSchema[]>(this.animalUrl);
 
+  }
   getAnimals() {
     return this._http.get<AnimalSchema[]>(this.animalUrl);
   }

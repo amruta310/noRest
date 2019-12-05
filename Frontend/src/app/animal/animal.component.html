@@ -1,0 +1,68 @@
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Animal</button>
+  </div>
+</div> -->
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+
+          <div class="list-group-item clearfix" *ngFor="let animal of animals">
+              <h1 class="list-group-item active" style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)">{{ animal.name }}</h1>
+              <img
+              [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
+              alt="{{ animal.name }}"
+              class="card-img-top"
+              style="max-height: 150px;">
+            <div class="card-body">
+              <p class="card-text">
+                  <label>Gender:{{ animal.gender }}</label><br>
+                  <label>Age:{{ animal.age }}</label>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Read More</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ask Question</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+</div>
+<hr>
+<!-- <div class="card">
+
+      <div class="pull-left" class="list-group-item clearfix" *ngFor="let animal of animals">
+        <h1 class="list-group-item active" style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)">{{ animal.name }}</h1> -->
+        <!-- <p class="list-group-item-text">{{ animal.specification }}</p> -->
+
+      <!-- <br>
+      <span class="pull-left">
+        <img
+          [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
+          alt="{{ animal.name }}"
+          class="dogimg"
+          style="max-height: 150px;">
+          <span class="animaldesc">
+            <label>Gender:{{ animal.gender }}</label><br>
+            <label>Age:{{ animal.age }}</label></span>
+
+          <br><br>
+          <a routerLink="/animaleach" class="list-group-item-heading">Read More</a>
+      </span>
+
+    </div> -->
+    <!-- <app-recipe-item></app-recipe-item> -->
+    <!-- <app-animal-each></app-animal-each> -->
+  <!-- </div> -->
+
+
+
+
+
+
