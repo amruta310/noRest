@@ -1,7 +1,9 @@
 import { SignUpComponent } from './../sign-up/sign-up.component';
 import { SharedService } from '../shared.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { HttpService } from './../http.service';
 import { Router } from '@angular/router';
+import { Donation } from '../models/Donation';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,9 +13,12 @@ export class HeaderComponent implements OnInit {
   openSignUpPage: boolean;
   signIn: boolean;
   username: string;
+  donations:Donation[];
+  showMe: boolean;
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
 
   constructor(private popup: SharedService, private _router: Router) {
+    this.showMe= true;
     this.username = "";
     this.signIn = true;
    }
@@ -41,5 +46,14 @@ export class HeaderComponent implements OnInit {
   onSignOut() {
     //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
     this.signIn = true;
+  }
+  // addDonation(donation:Donation)
+  // {
+  //   this._http.addDonation(donation).subscribe(donation=>{
+  //     this.donations.push(donation);
+  //   })
+  // }
+  setShowMe(){
+    this.showMe=false;
   }
 }

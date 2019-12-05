@@ -1,23 +1,83 @@
- <div class="container">
-  <app-logo class="logoDiv"></app-logo>
-  <div class="example-button-row">
-    <div class="rightDiv">
-      <button class="donateBtn" mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
-        <mat-icon class="favIcon">favorite</mat-icon>
-        <div class="donateNow">Donate Now</div>
-      </button>
+
+<!-- All the dependency files needed for css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<!-- file used inside script tag to render bootstrap css -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- bootstrap navigation bar -->
+<nav class="navbar navbar-inverse navbar-expand">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="../../assets/Images/logobetter.jpg" id="logo" alt="lOGO">
     </div>
-    <div *ngIf="signIn">
-      <button mat-button class="signUpBtn" (click)="openSignUp()">Sign Up</button>
-      <button mat-button class="loginBtn" (click)="openLogin()">Login</button>
-      <a mat-button class="loginBtn" routerLink="/animal">Animal</a>
-    </div>
-    <div *ngIf="signIn == false">
-        {{username}}
-        <button mat-button class="signOutBtn" (click)="onSignOut()">Sign Out</button>
-    </div>
-    <div *ngIf="openSignUpPage">
-      <app-sign-up (outputUser)="getOutputUser($event)"></app-sign-up>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+          <!-- <ul class="item"> -->
+        <li><a [routerLink]="['/animal']" (click)="setShowMe()">
+          Adopt
+        </a></li>
+        <li> <a [routerLink]="['/orderhistory']" (click)="setShowMe()">
+            About Us
+          </a></li>
+        <li><a [routerLink]="['/user-review-list']" (click)="setShowMe()">
+            Events
+          </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/login']">Login</a></li>
+
+        <li><a [routerLink]="['/signup']"><span
+              class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+        <li><a href="#">
+            <nav role='navigation'>
+              <div id="menuToggle">
+                <!-- checkbox used as click so as to use the :checked selector on it. -->
+                <input type="checkbox" />
+                <!-- actual hamburger bars -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <!-- menu that opens after clicking on hamburger -->
+                <ul id="menu">
+                 <a [routerLink]="['/signup']">
+                    Sign Up
+                  </a> <br><br>
+                  <a [routerLink]="['/user-profile']">
+                    About Us
+                  </a> <br><br>
+                  <a [routerLink]="['/orderhistory']">
+                    Adopt
+                  </a> <br><br>
+                  <div class="social-media">
+
+                      <a href="#"  class="icon-link">
+                       <i class="fab fa-instagram"></i>
+                      </a>
+
+                      <a href="#"  class="icon-link">
+                       <i class="fab fa-twitter-square"></i>
+                      </a>
+
+                      <a href="#"  class="icon-link">
+                       <i class="fab fa-linkedin"></i>
+                      </a>
+
+                      <a href="#"  class="icon-link">
+                       <i class="fab fa-github-square"></i>
+                      </a>
+
+                    </div>
+                </ul>
+              </div>
+            </nav>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+<div *ngIf="showMe">
+  <app-homecontent></app-homecontent>
 </div>

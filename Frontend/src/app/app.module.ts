@@ -20,6 +20,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AnimalComponent } from './animal/animal.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
+import { HomecontentComponent } from './homecontent/homecontent.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AnimalEachComponent } from './animal/animal-each/animal-each.component'
     ContactUsComponent,
     AnimalComponent,
     AnimalEachComponent,
+    HomecontentComponent,
   ],
   imports: [
     BrowserModule,
