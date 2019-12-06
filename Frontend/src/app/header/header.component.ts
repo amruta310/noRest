@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
   openSignUp() {
     const dialogRef = this.dialog.open(SignUpComponent, {
       width: '30%',
-      height: '500px'
+      height: '450px'
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result != undefined){
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
   openLogin() {
     const dialogRef = this.dialog.open(LoginComponent, {
       width: '30%',
-      height: '300px'
+      height: '260px'
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result != undefined){

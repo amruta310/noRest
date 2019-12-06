@@ -271,4 +271,11 @@ background-color: rgba(0, 0, 0, .3);
 /*Login and Sign Up */
 .loginBtn{
   color: #ffffff;
+  outline: 0;
+}
+
+.signedInUser{
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+  margin-top: 15px;
 }
