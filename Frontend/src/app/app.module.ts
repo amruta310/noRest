@@ -51,7 +51,8 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
     AnimalEachComponent,
     OurMissionComponent,
     InActionComponent,
-    DonationImpactComponent
+    DonationImpactComponent,
+    HomecontentComponent
   ],
   imports: [
     BrowserModule,
