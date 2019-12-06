@@ -28,6 +28,10 @@ import { LoginComponent } from './login/login.component';
 import { ValidationService } from './validation.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material';
+import { OurMissionComponent } from './FirstPage Components/our-mission/our-mission.component';
+import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
+import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +49,9 @@ import {MatInputModule} from '@angular/material';
     LoginComponent,
     AnimalComponent,
     AnimalEachComponent,
-    HomecontentComponent
+    OurMissionComponent,
+    InActionComponent,
+    DonationImpactComponent
   ],
   imports: [
     BrowserModule,
