@@ -21,6 +21,18 @@ let userSchema = new Schema({
     type: {
         type: String,
         required: "type is required"
+    },
+    address: {
+        type: String,
+        required: "address is required"
+    },
+    dob: {
+        type: Date,
+        required: "Date is required"
+    },
+    createdDate: {
+        type: Date,
+        default: Date.now
     }
 }, {
     versionKey: false

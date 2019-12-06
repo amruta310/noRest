@@ -11,11 +11,13 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class SignUpComponent implements OnInit {
   name: string;
-  gender: string;
   username: string;
   password: string;
+  address: string;
   param: string;
   currentUser: User;
+  dateOfBirth: Date;
+
   @Output() outputUser: EventEmitter<object> = new EventEmitter<object>();
   @Input() openDialogSignUp: boolean;
 
@@ -30,6 +32,14 @@ export class SignUpComponent implements OnInit {
 
   saveUser(user) {
     user.type = 'User';
+    user.name = this.name;
+    user.username = this.username;
+    user.password = this.password;
+    user.dob = this.dateOfBirth;
+    user.address = user.address;
+
+    console.log(user);
+    console.log(user.name);
     if(user.name != undefined){
       this._http.addUser(user).subscribe(data => {
         this.currentUser = data;
