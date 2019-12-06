@@ -26,10 +26,10 @@
           </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/login']">Login</a></li>
-
-        <li><a [routerLink]="['/signup']"><span
-              class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+        <!-- <li><a [routerLink]="['/login']">Login</a></li> -->
+        <li><a  mat-button class="loginBtn" (click)="openLogin()">Login</a></li>
+        <li><a  mat-button class="loginBtn" (click)="openSignUp()">Sign Up</a></li>
+        <!-- <li><a [routerLink]="['/signup']"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li> -->
         <li><a href="#">
             <nav role='navigation'>
               <div id="menuToggle">

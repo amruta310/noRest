@@ -1,9 +1,11 @@
+import { LoginComponent } from './../login/login.component';
 import { SignUpComponent } from './../sign-up/sign-up.component';
 import { SharedService } from '../shared.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpService } from './../http.service';
 import { Router } from '@angular/router';
 import { Donation } from '../models/Donation';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,7 +19,7 @@ export class HeaderComponent implements OnInit {
   showMe: boolean;
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
 
-  constructor(private popup: SharedService, private _router: Router) {
+  constructor(private popup: SharedService, private _router: Router,  public dialog: MatDialog) {
     this.showMe= true;
     this.username = "";
     this.signIn = true;
@@ -27,13 +29,29 @@ export class HeaderComponent implements OnInit {
   }
 
   openSignUp() {
-    //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
-    this.openSignUpPage = true;
+    const dialogRef = this.dialog.open(SignUpComponent, {
+      width: '30%',
+      height: '500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result != undefined){
+        this.username = "Welcome " + result.name;
+        this.signIn = false;
+      }
+    });
   }
 
   openLogin() {
-    //this._router.navigate(['/signUpOrLogin' + '/Login']);
-    this.openSignUpPage = true;
+    const dialogRef = this.dialog.open(LoginComponent, {
+      width: '30%',
+      height: '300px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result != undefined){
+        this.username = "Welcome " + result.name;
+        this.signIn = false;
+      }
+    });
   }
 
   getOutputUser(event) {
