@@ -1,5 +1,5 @@
+import { Animal } from './../models/animal.model';
 import { Component, OnInit } from '@angular/core';
-import { Animal } from '../models/animal.model';
 import { HttpService } from './../http.service';
 import {DomSanitizer, SafeUrl, SafeResourceUrl} from '@angular/platform-browser';
 import { Binary } from 'selenium-webdriver/firefox';
@@ -21,7 +21,9 @@ export class AnimalComponent implements OnInit {
   animalCommentMap = new Map();
   imageUrl: Binary;
   imageDisplay: SafeResourceUrl;
-  //animals:Animal[]=[new Animal('Bella','Hound /Australian Shepherd','https://media.defense.gov/2013/Dec/20/2000761758/750/422/0/131214-M-NP085-002.JPG')]
+  animalEachDisplay: boolean = false;
+  animalEach: Animal;
+
   constructor(private _http : HttpService, public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
@@ -32,5 +34,11 @@ export class AnimalComponent implements OnInit {
       // }
     });
   }
-
+  openDetails(i) {
+    this.animalEachDisplay = true;
+    this.animalEach = i;
+  }
+  callMain(){
+    this.animalEachDisplay = false;
+  }
 }
