@@ -10,18 +10,24 @@ import { AnimalEachComponent } from './animal/animal-each/animal-each.component'
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   //{ path: '', component: DashboardViewComponent },
   { path: 'events', component: EventListComponent },
-  { path: 'donation', component: DonationComponent },
+  { path: 'donation', component: DonationComponent ,
+    children: [
+      { path:'payment/:donationAmount' ,component: PaymentComponent}
+    ],
+  },
   { path: 'animal', component: AnimalComponent },
   { path: 'signUp/:param', component: SignUpComponent },
   { path: 'Login/:param', component: LoginComponent },
   { path: 'animaleach', component: AnimalEachComponent },
   { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'payment', component: PaymentComponent},
 ];
 
 @NgModule({

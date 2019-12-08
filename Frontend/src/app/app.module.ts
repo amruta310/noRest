@@ -32,6 +32,9 @@ import { OurMissionComponent } from './FirstPage Components/our-mission/our-miss
 import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
+import { EventCalendarComponent } from './event-calendar/event-calendar.component';
+import { MbscModule } from '@mobiscroll/angular';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,9 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
     InActionComponent,
     DonationImpactComponent,
     HomecontentComponent,
-    VideoBgComponent
+    VideoBgComponent,
+    EventCalendarComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,8 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
     MatFormFieldModule,
     MatDatepickerModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MbscModule
   ],
   bootstrap: [AppComponent]
 })

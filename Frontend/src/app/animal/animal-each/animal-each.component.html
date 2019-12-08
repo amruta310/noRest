@@ -1,65 +1,50 @@
 
+<!-- <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 blog-main">
 
+        
+      </div>
 
+      <aside class="col-md-4 blog-sidebar">
+        <div class="p-3 mb-3 bg-light rounded">
+          <h4 class="font-italic">Ask about Bella</h4>
+          <p class="mb-0">
+              <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Click to ask</button>
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+<hr> -->
 
-    <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8 blog-main">
-
-          <div class="blog-post">
-            <h2 class="blog-post-title border-bottom">Bella</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Amruta</a></p>
-            <img src="https://media.defense.gov/2013/Dec/20/2000761758/750/422/0/131214-M-NP085-002.JPG">
-            <br><br>
-
-
-            <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">Hound /Australian Shepherd</span></div>
-            <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">Female</span></div>
-            <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">1 Year</span></div>
-            <div><span class="animal-label">Health:&nbsp;</span><span class="animal-item">Vaccinations up to date, spayed / neutered</span></div>
-            <br>
-            <hr>
+<div class="overlay" (click)="onClick($emit)">
+    <h3 mat-dialog-title>Login</h3>
+      <form #userForm1="ngForm" (ngSubmit)="getUser(userForm1.value)">
+        <div class="example-container">
             <div class="blog-post">
-                <span class="animal-label">Big fan of:&nbsp;</span><p class="animal-item">Staying active! Bella likes to keep moving, and she has a number of ways she enjoys doing so.<br> A huge fan of walks, Bella loves getting outside to stretch her legs and racking up those steps<br> on her pedometer. But, aside from the exercise Bella’s favorite part about walks is getting to<br> meet lots of people and other dogs on the street! Bella has been the star of doggy playgroup<br> during her time at the ASPCA Adoption Center, but because her exuberant play style can<br> sometimes be a little overwhelming for other pups her adopter should keep a close eye on her<br> and her potential friends at the dog park. When she’s back home Bella loves engaging in just<br> about any game, especially when they involve lots of toys! Squeakers and tennis balls are a big<br> hit with this gal.</p>
-                <p class="animal-item">Sometimes it’s easiest to describe a pup with a simple phrase—and for Bella, that phrase is<br> “a whole lot of dog!”
-                  This social butterfly loves being on the go, participating in adventures<br> and having fun anytime and anywhere she can.
-                  Bella is looking for her kindred spirit—that is,<br> an adopter who enjoys the same!</p>
-                </div>
-              <br><br><br>
-          </div><!-- /.blog-post -->
-        </div><!-- /.blog-main -->
-
-        <aside class="col-md-4 blog-sidebar">
-          <div class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">Ask about Bella</h4>
-            <p class="mb-0">
-                <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Click to ask</button>
-            </p>
-          </div>
-        </aside><!-- /.blog-sidebar -->
-      </div><!-- /.row -->
-    </main><!-- /.container -->
-
-
-
-<hr>
-<!-- <div class="dogname">
-
-  <h1>Bella</h1>
-  <img src="https://media.defense.gov/2013/Dec/20/2000761758/750/422/0/131214-M-NP085-002.JPG">
-  <br><br>
-    <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">Hound /Australian Shepherd</span></div>
-    <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">Female</span></div>
-    <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">1 Year</span></div>
-    <div><span class="animal-label">Health:&nbsp;</span><span class="animal-item">Vaccinations up to date, spayed / neutered</span></div>
-    <br>
-    <div><p class="animal-item">Sometimes it’s easiest to describe a pup with a simple phrase—and for Bella, that phrase is<br> “a whole lot of dog!”
-      This social butterfly loves being on the go, participating in adventures<br> and having fun anytime and anywhere she can.
-      Bella is looking for her kindred spirit—that is,<br> an adopter who enjoys the same!</p></div>
-      <div><span class="animal-label">Big fan of:&nbsp;</span><p class="animal-item">Staying active! Bella likes to keep moving, and she has a number of ways she enjoys doing so.<br> A huge fan of walks, Bella loves getting outside to stretch her legs and racking up those steps<br> on her pedometer. But, aside from the exercise Bella’s favorite part about walks is getting to<br> meet lots of people and other dogs on the street! Bella has been the star of doggy playgroup<br> during her time at the ASPCA Adoption Center, but because her exuberant play style can<br> sometimes be a little overwhelming for other pups her adopter should keep a close eye on her<br> and her potential friends at the dog park. When she’s back home Bella loves engaging in just<br> about any game, especially when they involve lots of toys! Squeakers and tennis balls are a big<br> hit with this gal.</p></div>
-      <br><br><br>
-      <div class="donation-box">
-          <button type="button" class="btn btn-light">Ask About Bella</button>
-      </div> -->
-<!-- </div> -->
-
+                <h2 class="blog-post-title border-bottom">Bella</h2>
+                <p class="blog-post-meta">January 1, 2014 by <a href="#">Amruta</a></p>
+                {{ animalEach }}
+                {{ animalEach.Name }}
+                <img src="https://media.defense.gov/2013/Dec/20/2000761758/750/422/0/131214-M-NP085-002.JPG">
+                <br><br>
+      
+      
+                <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">Hound /Australian Shepherd</span></div>
+                <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">Female</span></div>
+                <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">1 Year</span></div>
+                <div><span class="animal-label">Health:&nbsp;</span><span class="animal-item">Vaccinations up to date, spayed / neutered</span></div>
+                <br>
+                <hr>
+                <div class="blog-post">
+                    <span class="animal-label">Big fan of:&nbsp;</span><p class="animal-item">Staying active! Bella likes to keep moving, and she has a number of ways she enjoys doing so.<br> A huge fan of walks, Bella loves getting outside to stretch her legs and racking up those steps<br> on her pedometer. But, aside from the exercise Bella’s favorite part about walks is getting to<br> meet lots of people and other dogs on the street! Bella has been the star of doggy playgroup<br> during her time at the ASPCA Adoption Center, but because her exuberant play style can<br> sometimes be a little overwhelming for other pups her adopter should keep a close eye on her<br> and her potential friends at the dog park. When she’s back home Bella loves engaging in just<br> about any game, especially when they involve lots of toys! Squeakers and tennis balls are a big<br> hit with this gal.</p>
+                    <p class="animal-item">Sometimes it’s easiest to describe a pup with a simple phrase—and for Bella, that phrase is<br> “a whole lot of dog!”
+                      This social butterfly loves being on the go, participating in adventures<br> and having fun anytime and anywhere she can.
+                      Bella is looking for her kindred spirit—that is,<br> an adopter who enjoys the same!</p>
+                    </div>
+                  <br><br><br>
+              </div>
+        </div>
+      </form>
+  </div>

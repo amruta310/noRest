@@ -1,9 +1,44 @@
-<!-- <div class="row">
-  <div class="col-xs-12">
-    <button class="btn btn-success">New Animal</button>
-  </div>
-</div> -->
 <div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="list-group-item clearfix alignDiv"  style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)" *ngFor="let animal of animals;  let i = animal"  (click)="openDetails(animal)">
+          <mat-card class="example-card">
+            <mat-card-header>
+                <img  mat-card-avatar class="example-header-image" [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)">
+              <mat-card-title>{{ animal.name }}</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img
+            [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
+            alt="{{ animal.name }}"
+            class="card-img-top"
+            style="max-height: 150px;">
+            <div class="card-body">
+              <p class="card-text">
+                  <label>Gender:{{ animal.gender }}</label><br>
+                  <label>Age:{{ animal.age }}</label>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Read More</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ask Question</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div *ngIf="animalEachDisplay">
+  <app-animal-each (divClicked)="callMain()" [animalEach]="animalEach"></app-animal-each>
+</div>
+<!--Done by Amruta-->
+<!-- <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row">
@@ -34,7 +69,7 @@
 </div>
 </div>
 </div>
-<hr>
+<hr> -->
 <!-- <div class="card">
 
       <div class="pull-left" class="list-group-item clearfix" *ngFor="let animal of animals">

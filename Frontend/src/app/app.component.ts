@@ -12,7 +12,8 @@ export class AppComponent {
   constructor() {}
 
   getDashboard(event) {
-    this.openDashboardPage = true;
+    this.openDashboardPage = event;
     this.loggedInUser = event;
+    console.log("After logging in " + this.openDashboardPage);
   }
 }

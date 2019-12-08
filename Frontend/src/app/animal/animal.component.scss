@@ -33,6 +33,18 @@ a:link, a:visited {
 a:hover, a:active {
   background-color:rgb(238, 227, 227);
 }
+.example-card {
+  max-width: 400px;
+}
 
+.example-header-image {
+  background-size: cover;
+}
 
+.alignDiv{
+  margin-bottom: 1px;
+  background-color: rgb(196, 32, 32);
+  border-color: rgb(196, 32, 32);
+  border-radius: 5px;
+}
 
