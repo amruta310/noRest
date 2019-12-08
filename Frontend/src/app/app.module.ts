@@ -31,6 +31,7 @@ import {MatInputModule} from '@angular/material';
 import { OurMissionComponent } from './FirstPage Components/our-mission/our-mission.component';
 import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
+import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
     OurMissionComponent,
     InActionComponent,
     DonationImpactComponent,
-    HomecontentComponent
+    HomecontentComponent,
+    VideoBgComponent
   ],
   imports: [
     BrowserModule,
