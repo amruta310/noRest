@@ -31,6 +31,7 @@ import {MatInputModule} from '@angular/material';
 import { OurMissionComponent } from './FirstPage Components/our-mission/our-mission.component';
 import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
+import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { MbscModule } from '@mobiscroll/angular';
 import { PaymentComponent } from './payment/payment.component';
@@ -56,6 +57,7 @@ import { PaymentComponent } from './payment/payment.component';
     InActionComponent,
     DonationImpactComponent,
     HomecontentComponent,
+    VideoBgComponent,
     EventCalendarComponent,
     PaymentComponent
   ],
