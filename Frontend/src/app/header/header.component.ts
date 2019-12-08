@@ -50,8 +50,15 @@ export class HeaderComponent implements OnInit {
       if(result != undefined){
         this.username = "Welcome " + result.name;
         this.signIn = false;
+        this.goodToload.emit(result);
+        this.showMe = false;
       }
     });
+  }
+
+  openDashboard(event){
+    this.goodToload.emit(event);
+    this.showMe = false;
   }
 
   getOutputUser(event) {
@@ -64,6 +71,7 @@ export class HeaderComponent implements OnInit {
   onSignOut() {
     //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
     this.signIn = true;
+    this.showMe = true;
   }
   // addDonation(donation:Donation)
   // {
@@ -72,6 +80,6 @@ export class HeaderComponent implements OnInit {
   //   })
   // }
   setShowMe(){
-    this.showMe=false;
+    this.showMe = false;
   }
 }

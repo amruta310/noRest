@@ -1,3 +1,4 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { HomecontentComponent } from './homecontent/homecontent.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
@@ -31,7 +32,7 @@ import {MatInputModule} from '@angular/material';
 import { OurMissionComponent } from './FirstPage Components/our-mission/our-mission.component';
 import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
-
+import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
     OurMissionComponent,
     InActionComponent,
     DonationImpactComponent,
-    HomecontentComponent
+    HomecontentComponent,
+    EventCalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
     MatFormFieldModule,
     MatDatepickerModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MbscModule
   ],
   bootstrap: [AppComponent]
 })

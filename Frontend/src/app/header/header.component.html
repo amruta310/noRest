@@ -15,9 +15,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
           <!-- <ul class="item"> -->
-        <li><a [routerLink]="['/animal']" (click)="setShowMe()">
+        <!-- <li><a [routerLink]="['/animal']" (click)="setShowMe()">
           Adopt
-        </a></li>
+        </a></li> -->
+        <li><a (click)="openDashboard($event)">
+            Adopt
+          </a>
+        </li>
         <li> <a [routerLink]="['/orderhistory']" (click)="setShowMe()">
             About Us
           </a></li>
