@@ -1,0 +1,39 @@
+@import "./../../scss/variable";
+
+.container {
+
+  margin-top: 50px;
+   font-size: 20px;
+
+   .header,.city {
+
+    font-weight: bolder;
+
+   }
+
+}
+
+.grid {
+
+ display: grid;
+ grid-template-columns: 450px 450px 450px;
+ margin-top: 20px;
+
+ .address {
+
+      color: darkgrey;
+      font-size: 14px;
+}
+
+
+.fa-map-marker-alt, .fa-phone-volume,.fa-envelope {
+
+  color :grey;
+  font-size: 15px;
+  padding: 10px;
+
+}
+
+}
+
+
