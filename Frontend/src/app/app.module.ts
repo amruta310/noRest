@@ -1,4 +1,3 @@
-import { MbscModule } from '@mobiscroll/angular';
 import { HomecontentComponent } from './homecontent/homecontent.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
@@ -33,6 +32,9 @@ import { OurMissionComponent } from './FirstPage Components/our-mission/our-miss
 import { InActionComponent } from './FirstPage Components/in-action/in-action.component';
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
+import { MbscModule } from '@mobiscroll/angular';
+import { PaymentComponent } from './payment/payment.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,8 @@ import { EventCalendarComponent } from './event-calendar/event-calendar.componen
     InActionComponent,
     DonationImpactComponent,
     HomecontentComponent,
-    EventCalendarComponent
+    EventCalendarComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

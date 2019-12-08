@@ -2,43 +2,28 @@
   <textarea matInput></textarea>
 </mat-form-field> -->
 <div class="donation-container">
-
+  <form #userForm1="ngForm" (ngSubmit)="addDonation(userForm1.value)">
   <div class="donation-box">
     <div class="title">Donation Information</div>
 
     <div class="fields">
-      <input type="text" id="firstName" placeholder="First Name" [(ngModel)]="firstName">
-      <input type="text" id="lastName" placeholder="Last Name"  [(ngModel)]="lastName">
-      <input type="text" id="email" placeholder="Email"  [(ngModel)]="email">
+      <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="firstName">
+      <input type="text" name="lastName" placeholder="Last Name"  [(ngModel)]="lastName">
+      <input type="text" name="email" placeholder="Email"  [(ngModel)]="email">
     </div>
 
     <div class="amount">
-      <div class="button">$<input type="text" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
+      <div class="button">$<input type="text" name="donationAmount" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
     </div>
 
-    <!-- <div class="switch">
-<input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
-<label for="one-time" class="switch-label switch-label-off">One-Time</label>
-<input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
-<label for="monthly" class="switch-label switch-label-on">Monthly</label>
-<span class="switch-selection"></span>
-</div> -->
-
-<!-- <div class="checkboxes">
-<input type="checkbox" id="receipt" class="checkbox" />
-  <label for="receipt">Email Me A Receipt</label>
-  <br />
-  <input type="checkbox" id="anon" class="checkbox" />
-  <label for="anon">Give Anonymously</label>
-  <br />
-</div> -->
-<div class="confirm">
-</div>
-
-    <div class="donate-button">Donate Now
-    <a routerLink="" class="donate-button">Back</a>
+    <div class="donate-button">
+        <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a>
+        <a routerLink="" class="donate-button">Back</a>
     </div>
 
+
 </div>
+</form>
 </div>
-<app-event-list></app-event-list>
+
+

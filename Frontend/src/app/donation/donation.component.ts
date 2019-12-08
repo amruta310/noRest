@@ -1,32 +1,29 @@
 import { Component, OnInit,EventEmitter, Output } from '@angular/core';
-import { Donation } from '../models/Donation';
+// import { Donation } from '../models/Donation';
+import { HttpService } from './../http.service';
+import {Donation} from '../../../../Backend/api/models/donationSchema';
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.component.html',
   styleUrls: ['./donation.component.scss']
 })
 export class DonationComponent implements OnInit {
-  firstName:string;
-  lastName:string;
-  email:string;
-  donationAmount:string;
-  donations:Donation[];
-  @Output() addDonation: EventEmitter<any>= new EventEmitter();
-  constructor() { }
+  firstName: any;
+  lastName: string;
+  email: string;
+  donationAmount: string;
+  postDonation: Donation;
 
-  ngOnInit() {
-  }
-  onSubmit()
-  {
-    const donation={
-      firstName:this.firstName,
-      lastName:this.lastName,
-      email:this.email,
-      donationAmount:this.donationAmount
-    }
+  constructor(private _http: HttpService){}
+  ngOnInit() {}
+  addDonation(user) {
+    // console.log(this.postDonation);
 
-    this.addDonation.emit(donation);
+       this._http.addDonation(user).subscribe(data => {
+        for (let usr of Object.keys(data)){
 
+        }
+      });
   }
 
 }
