@@ -9,15 +9,18 @@ module.exports = function (app) {
     let eventSchema = require('./models/eventSchema');
     let commentSchema = require('./models/commentSchema');
     let paymentSchema = require('./models/paymentSchema');
+    let donationSchema = require('./models/donationSchema');
     //Initialize routes
     let animalRoutes = require('./routes/animal-route');
     let eventRoutes = require('./routes/event-route');
     let userRoutes = require('./routes/user-route');
     let commentRoutes = require('./routes/comment-route');
     let paymentRoutes = require('./routes/payment-route');
+    let donationRoutes = require('./routes/donation-route');
     animalRoutes(app);
     eventRoutes(app);
     userRoutes(app);
     commentRoutes(app);
     paymentRoutes(app);
+    donationRoutes(app);
 };
