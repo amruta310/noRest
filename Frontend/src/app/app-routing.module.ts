@@ -15,11 +15,7 @@ import { PaymentComponent } from './payment/payment.component';
 const routes: Routes = [
   //{ path: '', component: DashboardViewComponent },
   { path: 'events', component: EventListComponent },
-  { path: 'donation', component: DonationComponent ,
-    children: [
-      { path:'payment/:donationAmount' ,component: PaymentComponent}
-    ],
-  },
+  { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
   { path: 'signUp/:param', component: SignUpComponent },
   { path: 'Login/:param', component: LoginComponent },
@@ -27,7 +23,7 @@ const routes: Routes = [
   { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'payment', component: PaymentComponent},
+  { path: 'payment/:donationAmount', component: PaymentComponent},
 ];
 
 @NgModule({

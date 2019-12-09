@@ -1,7 +1,7 @@
 <!-- <mat-form-field>
   <textarea matInput></textarea>
 </mat-form-field> -->
-<div class="donation-container">
+<div class="donation-container" *ngIf="!openPayment">
   <form #userForm1="ngForm" (ngSubmit)="addDonation(userForm1.value)">
   <div class="donation-box">
     <div class="title">Donation Information</div>
@@ -17,13 +17,16 @@
     </div>
 
     <div class="donate-button">
-        <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a>
+        <!-- <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a> -->
+        <a [routerLink]="['/payment', donationAmount]" (click)="closeComp()">Donate Now</a>
+        <!-- <a (click)="closeComp($event)">Donate Now</!-->
         <a routerLink="" class="donate-button">Back</a>
     </div>
-
 
 </div>
 </form>
 </div>
 
-
+<div *ngIf="openPayment">
+  <app-payment (loadPayment)="insideDonation()"></app-payment>
+</div>

@@ -1,4 +1,4 @@
-<div class="component-body">
+<div class="component-body" *ngIf="!onlyPayment">
     <div class="v-header container">
         <div class="fullscreen-video-wrap">
                 <video  loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
@@ -11,7 +11,7 @@
                 <h1 class="jumbotron-heading">It's Not Too Late</h1>
                 <p class="lead">You can still rescue helpless animals Today</p>
                 <!-- <a routerLink="/donation" class="btn" >Donate</a> -->
-                <a (click)="openDonation()"class="btn" >Donate</a>
+                <a (click)="openDonation()" class="btn">Donate</a>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 
-<body>
-    <app-video-bg></app-video-bg>
+<body *ngIf="!onlyPayment">
+    <app-video-bg (loadPayment)="loadPaymentComp()"></app-video-bg>
     <app-our-mission></app-our-mission>
     <br>
     <app-in-action></app-in-action>
