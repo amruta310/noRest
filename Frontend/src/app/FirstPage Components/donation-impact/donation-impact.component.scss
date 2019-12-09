@@ -63,6 +63,7 @@
         background-image: url(../Images/DonationSection2.jpeg);
         grid-column: 1  ;
         grid-row: 4 ;
+       
     }
     .c {
         background-image: url(../Images/DonationSection3.jpg);
@@ -85,30 +86,37 @@
     // ------------donation grid text content--------
 
     
-.DonationSection1Content{
-    position: relative;
-    color: white;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    .DonationSection1Content{
+        position: relative;
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        max-width: 150px;
+        align-content: flex-end;
+        padding: 50px 20px 0px 20px;
+        margin: 50px auto auto auto;
+    }
+    .A{
+        max-width: 15%;
+    }
+    .B{
+        max-width: 50%;     
+    }
+
+.donationcontentgrid{
+
+    display: grid;
+    grid-gap: 2px;
+    // grid-template-columns: 150px;
+    grid-template-rows: 50px 50px 50px;
+    background-color: none;
+    color:white;
+    text-align: center;
+    font-weight: 700;
     font-style: normal;
-    max-width: 150px;
-    align-content: flex-end;
-}
-.A{
-    margin-top: 170px;
-    margin-left: 700px;
-}
-.B{
-
-}
-.C{
-
-}
-
-.D{
-
-}
-
-.E{
-    
+    z-index: 99;
+    align-content: center;
+    padding: 50px 20px 0px 20px;
+        margin: 50px auto auto auto;
 }
