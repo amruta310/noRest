@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <div class="list-group-item clearfix alignDiv"  style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)" *ngFor="let animal of animals;  let i = animal"  (click)="openDetails(animal)">
+        <div class="list-group-item clearfix alignDiv"  style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)" *ngFor="let animal of animals"  (click)="openDetails(animal)">
           <mat-card class="example-card">
             <mat-card-header>
                 <img  mat-card-avatar class="example-header-image" [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)">
@@ -34,9 +34,9 @@
   </div>
 </div>
 <hr>
-<div *ngIf="animalEachDisplay">
+<!-- <div *ngIf="animalEachDisplay">
   <app-animal-each (divClicked)="callMain()" [animalEach]="animalEach"></app-animal-each>
-</div>
+</div> -->
 <!--Done by Amruta-->
 <!-- <div class="album py-5 bg-light">
     <div class="container">
