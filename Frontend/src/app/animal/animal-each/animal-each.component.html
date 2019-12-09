@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-8 blog-main">
 
-        
+
       </div>
 
       <aside class="col-md-4 blog-sidebar">
@@ -17,8 +17,18 @@
     </div>
   </main>
 <hr> -->
+<div class="overlay" (click)="onClick($event)">
+    <h3 mat-dialog-title>{{ animalEach.name }}</h3>
+     <div class="example-container">
+          <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">Hound /Australian Shepherd</span></div>
+          <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">Female</span></div>
+          <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">1 Year</span></div>
+          <div><span class="animal-label">Health:&nbsp;</span><span class="animal-item">Vaccinations up to date, spayed / neutered</span></div>
+          <br>
+      </div>
+  </div>
 
-<div class="overlay" (click)="onClick($emit)">
+<!-- <div class="overlay" (click)="onClick($emit)">
     <h3 mat-dialog-title>Login</h3>
       <form #userForm1="ngForm" (ngSubmit)="getUser(userForm1.value)">
         <div class="example-container">
@@ -26,11 +36,11 @@
                 <h2 class="blog-post-title border-bottom">Bella</h2>
                 <p class="blog-post-meta">January 1, 2014 by <a href="#">Amruta</a></p>
                 {{ animalEach }}
-                {{ animalEach.Name }}
+                {{ animalEach.name }}
                 <img src="https://media.defense.gov/2013/Dec/20/2000761758/750/422/0/131214-M-NP085-002.JPG">
                 <br><br>
-      
-      
+
+
                 <div><span class="animal-label">Breed:&nbsp;</span><span class="animal-item">Hound /Australian Shepherd</span></div>
                 <div><span class="animal-label">Gender:&nbsp;</span><span class="animal-item">Female</span></div>
                 <div><span class="animal-label">Age:&nbsp;</span><span class="animal-item">1 Year</span></div>
@@ -47,4 +57,4 @@
               </div>
         </div>
       </form>
-  </div>
+  </div> -->
