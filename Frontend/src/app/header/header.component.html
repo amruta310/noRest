@@ -7,7 +7,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <!-- bootstrap navigation bar -->
-<nav class="navbar navbar-inverse navbar-expand">
+<nav class="navbar navbar-inverse navbar-expand bg">
   <div class="container-fluid">
     <div class="navbar-header">
       <img src="../../assets/Images/logobetter.jpg" id="logo" alt="lOGO">
@@ -18,14 +18,14 @@
         <!-- <li><a [routerLink]="['/animal']" (click)="setShowMe()">
           Adopt
         </a></li> -->
-        <li><a (click)="openDashboard($event)">
+        <li><a (click)="openDashboard($event)"  mat-button class="loginBtn">
             Adopt
           </a>
         </li>
-        <li> <a [routerLink]="['/orderhistory']" (click)="setShowMe()">
+        <li> <a [routerLink]="['/orderhistory']" mat-button class="loginBtn" (click)="setShowMe()">
             About Us
           </a></li>
-        <li><a [routerLink]="['/user-review-list']" (click)="setShowMe()">
+        <li><a [routerLink]="['/user-review-list']" mat-button class="loginBtn" (click)="setShowMe()">
             Events
           </a></li>
       </ul>
