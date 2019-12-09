@@ -33,8 +33,8 @@ import { InActionComponent } from './FirstPage Components/in-action/in-action.co
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
-import { MbscModule } from '@mobiscroll/angular';
 import { PaymentComponent } from './payment/payment.component';
+import { MbscModule } from '@mobiscroll/angular';
 
 @NgModule({
   declarations: [
