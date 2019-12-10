@@ -22,10 +22,10 @@
             Adopt
           </a>
         </li>
-        <li> <a [routerLink]="['/aboutus']" mat-button class="loginBtn" (click)="setShowMe()">
+        <li> <a [routerLink]="['/aboutUs']" mat-button class="loginBtn" (click)="setShowMe()">
             About Us
           </a></li>
-        <li><a [routerLink]="['/events']" mat-button class="loginBtn">
+        <li><a [routerLink]="['/events']"  (click)="setShowMe()" mat-button class="loginBtn">
             Events
           </a></li>
       </ul>
@@ -45,14 +45,14 @@
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                 <a [routerLink]="['/signup']">
-                    Sign Up
-                  </a><br><br>
-                  <a [routerLink]="['/user-profile']">
+                  <a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn" >
+                    Adopt
+                  </a> <br><br>
+                  <a [routerLink]="['/aboutUs']" mat-button class="loginBtn" (click)="setShowMe()">
                     About Us
                   </a> <br><br>
-                  <a [routerLink]="['/orderhistory']">
-                    Adopt
+                  <a [routerLink]="['/events']" mat-button  (click)="setShowMe()" class="loginBtn">
+                    Events
                   </a> <br><br>
                   <div class="social-media">
 
