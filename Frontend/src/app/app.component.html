@@ -1,20 +1,11 @@
 
 <header>
   <app-header (goodToload)="getDashboard($event)" (openHome)="openHome()" class="header"></app-header>
-  <!-- <app-side-nav></app-side-nav> -->
-  <!-- <app-event-calendar></app-event-calendar> -->
 </header>
 <div *ngIf="!openDashboardPage">
     <app-home ></app-home>
 </div>
-<!-- <app-payment></!-->
 <div class="container">
-
-  <!-- <div *ngIf="openDashboardPage">
-    <app-dashboard-view [loggedInUser]="loggedInUser"></!
-    <app-animal></app-animal>
-  </div> -->
-
   <router-outlet></router-outlet>
 </div>
 

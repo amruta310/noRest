@@ -1,7 +1,6 @@
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { MbscModule } from '@mobiscroll/angular';
-import { HomecontentComponent } from './homecontent/homecontent.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
@@ -58,7 +57,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     OurMissionComponent,
     InActionComponent,
     DonationImpactComponent,
-    HomecontentComponent,
     VideoBgComponent,
     EventCalendarComponent,
     PaymentComponent,

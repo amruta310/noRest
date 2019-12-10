@@ -1,5 +1,6 @@
 
 // -------------ARL----------
+@import "./../../../scss/variable";
 .container
 {
     width: 100%;
@@ -8,12 +9,9 @@
     font-display: arial;
 }
 
-.heading
-{
-}
 
 .heading::after{
-  background: #d52b1e;
+  background: $content-color;
     content: "'";
     display: block;
     height: 4px;
@@ -40,16 +38,6 @@
 .arlimage3 {background-image: url(../Images/arlimage3.jpg);}
 
 .arlgridcontent{
-  //  background: linear-gradient(to top, #fff, rgba(255,255,255,0));
-  //   bottom: 0;
-  //   content: "'";
-  //   display: block;
-  //   height: 50%;
-  //   left: 0;
-  //   position: absolute;
-  //   right: 0;
-  //   text-indent: -9999px;
-
     text-align: left;
 }
 

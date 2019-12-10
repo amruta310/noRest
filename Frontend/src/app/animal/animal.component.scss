@@ -1,3 +1,5 @@
+@import "./../../scss/variable";
+@import "./../../scss/mixin";
 .container{
   margin-left: 37px;
 }
@@ -12,19 +14,22 @@
 }
 .animalheader{
   font-family: monospace;
-  font-size: 35px;
+  @include contentsize(35px);
+  //font-size: 35px;
   font-weight: small;
-  height: 40%;
-  width: 50%;
-  background-color:  rgb(196, 32, 32);
+  @include imagedimension(50%,40%);
+  // height: 40%;
+  // width: 50%;
+  background-color:  $content-color;
 }
 .animaldesc{
   font-family: monospace;
-  font-size: 15px;
+  @include contentsize(15px);
+  //font-size: 15px;
   font-weight: small;
 }
 a:link, a:visited {
-  background-color: rgb(196, 32, 32);
+  background-color: $content-color;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -50,13 +55,14 @@ a:hover, a:active {
 
 .alignDiv{
   margin-bottom: 1px;
-  background-color: rgb(196, 32, 32);
-  border-color: rgb(196, 32, 32);
+  background-color: $content-color;
+  border-color: $content-color;
   border-radius: 5px;
 }
 .card-img-top{
-  width: 295px;
-  height: 200px;
+  @include imagedimension(295px,200px);
+  // width: 295px;
+  // height: 200px;
 }
 
 .scrolling-wrapper {

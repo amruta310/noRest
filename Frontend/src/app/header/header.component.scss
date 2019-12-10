@@ -31,7 +31,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: rgb(184, 27, 27);
+    background-color: $content-color;
 }
 
 a {
@@ -103,7 +103,7 @@ a {
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #971818;
+    background: $content-color;
 }
 
 /*
@@ -135,7 +135,7 @@ a {
     padding-top: 125px;
     right: -100px;
 
-    background: rgb(180, 25, 25);
+    background: $content-color;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
