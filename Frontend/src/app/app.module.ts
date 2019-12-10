@@ -2,7 +2,7 @@ import { HomecontentComponent } from './homecontent/homecontent.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
-import { MatButtonModule, MatIconModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatFormFieldModule,MatExpansionModule } from '@angular/material';
 import { BrowserModule, DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -77,7 +77,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatInputModule,
     MbscModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule
+
   ],
   bootstrap: [AppComponent]
 })
