@@ -25,7 +25,13 @@ let eventSchema = new Schema({
     amount: {
         type: Number,
         required: "amount is required"
-    }
+    },
+
+    title: {
+        type: String,
+        required: "title is required"
+    },
+    
 }, {
     versionKey: false
 });

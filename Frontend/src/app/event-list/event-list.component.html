@@ -1,7 +1,52 @@
-<mat-card>
-    <mat-card-title>card title</mat-card-title>
-    <mat-card-content>This is card content </mat-card-content>
-    <mat-card-actions >
-      <button mat-raised-button>Book Event</button>
-    </mat-card-actions>
-  </mat-card>
+
+
+
+    <mat-accordion multi="true" hideToggle>
+        <div  *ngFor="let event of events" >
+            <mat-expansion-panel class="test">
+                <mat-expansion-panel-header >
+                  <mat-panel-title >
+                    {{ event.title }}
+                  </mat-panel-title>
+                  <mat-panel-description>
+                          {{ event.start | date:'d MMMM yyyy' : 'UTC' }}
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>{{event.text}}</p>        
+              <mat-action-row>
+                  <a mat-button class="bookingBtn"  >Buy Tickets</a>
+              </mat-action-row>
+            
+            </mat-expansion-panel>
+    
+        </div>
+        
+            
+    </mat-accordion>
+
+
+
+<!-- --------------------- -->
+
+
+    <!-- <div *ngFor="let event of events">
+
+        <mat-card>
+            <mat-card-title>{{ event.title }}</mat-card-title>
+            <mat-card-content>{{event.text}} </mat-card-content>
+            <mat-card-actions >
+              <button mat-raised-button >Book Event</button>
+            </mat-card-actions>
+          </mat-card>
+        
+        </div> -->
+
+        <!-- ---------------------------------------- -->
+
+       
+        
+        
+
+
+
+
