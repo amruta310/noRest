@@ -9,16 +9,15 @@ export class AppComponent {
   openDashboardPage: boolean;
   loggedInUser: object;
   onlyPayment: boolean;
+
   constructor() {}
 
   getDashboard(event) {
-    this.openDashboardPage = event;
+    this.openDashboardPage = true;
     this.loggedInUser = event;
-    console.log("After logging in " + this.openDashboardPage);
   }
 
   removeHome(){
-    console.log('Remove');
     this.onlyPayment = true;
   }
 }

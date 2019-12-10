@@ -1,3 +1,4 @@
+import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { MbscModule } from '@mobiscroll/angular';
 import { HomecontentComponent } from './homecontent/homecontent.component';
@@ -20,7 +21,6 @@ import { DonationComponent } from './donation/donation.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-// import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -61,7 +61,8 @@ import { AskquestionComponent } from './animal/askquestion/askquestion.component
     VideoBgComponent,
     EventCalendarComponent,
     PaymentComponent,
-    AskquestionComponent
+    AskquestionComponent,
+    AboutusComponent
   ],
   imports: [
     MbscModule,

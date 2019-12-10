@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
   openSignUp() {
     const dialogRef = this.dialog.open(SignUpComponent, {
       width: '30%',
-      height: '450px'
+      height: '500px'
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result != undefined){
@@ -81,6 +81,6 @@ export class HeaderComponent implements OnInit {
   //   })
   // }
   setShowMe(){
-    this.showMe = false;
+    this.goodToload.emit(event);
   }
 }
