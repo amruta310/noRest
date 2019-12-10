@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Comments } from './../../../Backend/api/models/commentSchema';
 import { User } from './../../../Backend/api/models/userSchema';
 import { Donation } from './../../../Backend/api/models/userSchema';
+import { Question } from './../../../Backend/api/models/askQuestion';
 const httpOptions={
   headers:new HttpHeaders({
     'Content-Type': 'application/json'
@@ -22,6 +23,8 @@ export class HttpService {
   private userUrl = 'http://localhost:3000/users';
   private donationUrl= 'http://localhost:3000/donations';
   private mailUrl= 'http://localhost:3000/sendMail';
+  private questionUrl='http://localhost:3000/questions';
+
   //private donationUrl = 'http://localhost:3000/donation';
 
   constructor(public _http: HttpClient) { }
@@ -53,7 +56,9 @@ export class HttpService {
   addDonation(donation:Donation){
     return this._http.post<Donation>(this.donationUrl,donation);
   }
-
+  addQuestion(question:Question){
+    return this._http.post<Question>(this.questionUrl,question);
+  }
   getUser() {
     return this._http.get<User>(this.userUrl);
   }

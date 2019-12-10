@@ -15,13 +15,13 @@
         <input type="text" name="email" placeholder="Email" required  [(ngModel)]="email">
       </div>
 
+
       <div class="amount">
         <div class="button">$<input type="text" name="donationAmount" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
       </div>
       <div>
           <!-- <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a> -->
           <button mat-button name="submit" class="btnAlign">Donate Now</button>
-          <button mat-button routerLink="" class="btnAlign">Back</button>
           <!-- <a [routerLink]="['/payment', donationAmount]">Donate Now</!--> -->
           <!-- <a routerLink="" class="donate-button">Back</a> -->
       </div>
