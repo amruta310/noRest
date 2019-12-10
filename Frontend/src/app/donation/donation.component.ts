@@ -21,13 +21,7 @@ export class DonationComponent implements OnInit {
   constructor(private _http: HttpService, public dialogRef: MatDialogRef<DonationComponent>){}
   ngOnInit() {}
   addDonation(user) {
-    // console.log(this.postDonation);
-
-       this._http.addDonation(user).subscribe(data => {
-        for (let usr of Object.keys(data)){
-
-        }
-      });
+    console.log(this.postDonation.email);
   }
   closeComp(){
     this.openPayment = true;
