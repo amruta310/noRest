@@ -22,20 +22,6 @@ export class DonationComponent implements OnInit {
   ngOnInit() {}
   addDonation(user) {
     console.log(this.postDonation.email);
-      this._http.sendEmail({
-        from: 'Mailgun Sandbox <postmaster@sandboxyourapikeysetXXXXXX.mailgun.org>',
-        to: 'patil.amrutap310@gmail.com',
-        name: 'amruta',
-        text: 'hello',
-  })
-  .subscribe(
-    () => {}
-  );
-       this._http.addDonation(user).subscribe(data => {
-        for (let usr of Object.keys(data)){
-
-        }
-      });
   }
   closeComp(){
     this.openPayment = true;

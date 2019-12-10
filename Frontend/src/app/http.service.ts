@@ -60,7 +60,4 @@ export class HttpService {
   getUser() {
     return this._http.get<User>(this.userUrl);
   }
-  sendEmail(argparam) {
-    return this._http.post('httpspakainfo.com/email/', argparam);
-  }
 }
