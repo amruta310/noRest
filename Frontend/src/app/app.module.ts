@@ -36,6 +36,7 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,8 +62,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     EventCalendarComponent,
     PaymentComponent
   ],
-  imports: [ 
-    MbscModule, 
+  imports: [
+    MbscModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
