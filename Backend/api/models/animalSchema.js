@@ -32,8 +32,7 @@ let animalSchema = new Schema({
     },
 
     crueltyCase: {
-        data: String,
-        required: "report if any cruelty case reported on this animal"
+        data: String
     },
 
     adoptingUsers:[

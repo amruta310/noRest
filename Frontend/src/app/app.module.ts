@@ -1,3 +1,4 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { HomecontentComponent } from './homecontent/homecontent.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
@@ -34,7 +35,6 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { PaymentComponent } from './payment/payment.component';
-import { MbscModule } from '@mobiscroll/angular';
 import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
@@ -61,7 +61,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     EventCalendarComponent,
     PaymentComponent
   ],
-  imports: [
+  imports: [ 
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -76,7 +77,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDatepickerModule,
     MatCardModule,
     MatInputModule,
-    MbscModule,
     MatGridListModule,
     MatExpansionModule
 
