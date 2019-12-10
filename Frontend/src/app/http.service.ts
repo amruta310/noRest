@@ -64,6 +64,7 @@ export class HttpService {
   }
 
   sendMail(data){
+    console.log('In service ' + data);
     return this._http.post(this.mailUrl, data);
   }
 }

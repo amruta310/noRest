@@ -34,12 +34,12 @@ exports.save = function (user) {
                         pass:process.env.PASSWORD
                     }
         });
-
+        console.log(' --- user ' + user);
         var mailOptions = {
             from: 'pawfectadoption@gmail.com',
-            to: 'patil.amrutap310@gmail.com',
+            to: user.email,
             subject: 'Sign up',
-            text: 'Thank you for signing up to Pawfect!'
+            text: 'Thank you ' + user.username + ' for signing up to Pawfect!'
         };
         transporter.sendMail(mailOptions, function(error, info){
             if (error) {
