@@ -20,17 +20,17 @@ export class DonationImpactComponent implements OnInit {
   percentadopted : number;
   crueltycase : number;
   veterinarycarecount: number;
-
-
+  
+  
 
   constructor(private _http : HttpService, public sanitizer: DomSanitizer) {
-
+    
     this.countStatus=0;
     this.animalcount=0;
     this.percentadopted=0;
     this.crueltycase=0;
-    this.veterinarycarecount=10;
-
+    this.veterinarycarecount=10;    
+   
   }
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class DonationImpactComponent implements OnInit {
       this.animals = data;
 
       for (let anm of this.animals) {
-
+         
         this.animalcount = this.animalcount + 1 ;
         if( anm.status == "Adopted")
         {
@@ -55,7 +55,7 @@ export class DonationImpactComponent implements OnInit {
         }
 
     }
-
+ 
   });
 }
 }
