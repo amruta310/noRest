@@ -37,6 +37,7 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { AskquestionComponent } from './animal/askquestion/askquestion.component
     MatCardModule,
     MatInputModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgCircleProgressModule.forRoot({}),
   ],
   bootstrap: [AppComponent]
 })
