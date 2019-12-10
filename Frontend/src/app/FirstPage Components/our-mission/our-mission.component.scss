@@ -25,13 +25,13 @@
 
 .column_inner
 {
-    
+
     height: 100%;
     overflow: hidden;
     padding: 0;
     position: relative;
     margin: 0;
-    
+
 }
 
 .wrapper {
@@ -127,13 +127,13 @@
 * {
     box-sizing: border-box;
   }
-  
+
   .column {
     float: left;
     width: 25%;
     // padding: 5px;
   }
-  
+
   /* Clearfix (clear floats) */
   .row::after {
     content: "";
@@ -141,14 +141,33 @@
     display: table;
   }
 
-  
+
 .grid1content{
     display: table-cell;
-    padding: 220px 10px 10px 90px;
+    font-size: 50px;
+    margin-bottom: 0;
     vertical-align: bottom;
     color: white;
     position: relative;
-   
-    
+
+
+}
+.grid1content h1{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.grid1content p {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.grid1content btn {
+  background-color: rgb(196, 32, 32);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 2rem 2rem;
+  text-decoration: none;
 }
 

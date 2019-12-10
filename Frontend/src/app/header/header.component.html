@@ -22,7 +22,7 @@
             Adopt
           </a>
         </li>
-        <li> <a [routerLink]="['/orderhistory']" mat-button class="loginBtn" (click)="setShowMe()">
+        <li> <a [routerLink]="['/aboutus']" mat-button class="loginBtn" (click)="setShowMe()">
             About Us
           </a></li>
         <li><a [routerLink]="['/events']" mat-button class="loginBtn">
@@ -41,11 +41,9 @@
               <div id="menuToggle">
                 <!-- checkbox used as click so as to use the :checked selector on it. -->
                 <input type="checkbox" />
-                <!-- actual hamburger bars -->
                 <span></span>
                 <span></span>
                 <span></span>
-                <!-- menu that opens after clicking on hamburger -->
                 <ul id="menu">
                  <a [routerLink]="['/signup']">
                     Sign Up
