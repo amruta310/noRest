@@ -30,10 +30,18 @@ let animalSchema = new Schema({
         data: Buffer, 
         contentType: String 
     },
+
+    crueltyCase: {
+        data: String,
+        required: "report if any cruelty case reported on this animal"
+    },
+
     adoptingUsers:[
         {type: Schema.Types.ObjectId, ref: 'Users'}
       ]
-}, {
+},
+
+{
     versionKey: false
 });
 
