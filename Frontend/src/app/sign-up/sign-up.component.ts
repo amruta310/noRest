@@ -38,6 +38,27 @@ export class SignUpComponent implements OnInit {
     user.dob = this.dateOfBirth;
     user.address = this.address;
     user.email = this.email;
+    if(this.name == undefined || this.name == "") {
+      alert("Please enter a value in Name.");
+        return;
+    }
+    if(this.username == undefined || this.username == "") {
+      alert("Please enter a value in username.");
+        return;
+    }
+    if(this.password == undefined || this.password == "") {
+      alert("Please enter password.");
+        return;
+    }
+    if(this.address == undefined || this.address == "") {
+      alert("Please enter a value in address.");
+        return;
+    }
+    if(this.email == undefined || this.email == "") {
+      alert("Please enter a value in password.");
+        return;
+    }
+
     if(user.name != undefined){
       this._http.addUser(user).subscribe(data => {
         this._http.sendMail(user).subscribe(data => {

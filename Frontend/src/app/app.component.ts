@@ -13,8 +13,13 @@ export class AppComponent {
   constructor() {}
 
   getDashboard(event) {
+    console.log('here');
     this.openDashboardPage = true;
     this.loggedInUser = event;
+  }
+
+  openHome(event) {
+    this.openDashboardPage = false;
   }
 
   removeHome(){

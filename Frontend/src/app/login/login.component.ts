@@ -14,6 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {Inject} from '@angular/core';
 import { User } from '../../../../Backend/api/models/userSchema';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-login',
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
   password: string;
   param: string;
   currentUser: User;
+  notFound: boolean = true;
   @Output() outputUser: EventEmitter<object> = new EventEmitter<object>();
   @Input() openDialogSignUp: boolean;
 
@@ -48,14 +50,31 @@ export class LoginComponent implements OnInit {
     //   alert(`Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`);
     // }
     // else {
+
+      if(this.username == undefined || this.username == "") {
+        alert("Please enter a value in Name.");
+        return;
+      }
+      if(this.password == undefined || this.username == "") {
+        alert("Please enter Password.");
+        return;
+      }
+
       this._http.getUser().subscribe(data => {
+        console.log(data);
         for (let usr of Object.keys(data)){
-          if (data[usr].username == user.username) {
+          if (data[usr].username == this.username || data[usr].password == this.password) {
             this.currentUser = data[usr];
+            this.notFound = false;
+            this.outputUser.emit(this.currentUser);
+            this.dialogRef.close(this.currentUser);
+            break;
           }
         }
-        this.outputUser.emit(this.currentUser);
-        this.dialogRef.close(this.currentUser);
+        if(this.notFound) {
+          alert("Invalid username and password");
+          return;
+        }
       });
     // }
   }

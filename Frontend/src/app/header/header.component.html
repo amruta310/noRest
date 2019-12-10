@@ -10,14 +10,10 @@
 <nav class="navbar navbar-inverse navbar-expand bg">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="../../assets/Images/logobetter.jpg" [routerLink]="['/']" id="logo" alt="lOGO">
+      <img src="../../assets/Images/logobetter.jpg" [routerLink]="['/']" id="logo" alt="lOGO" (click)="openMain()" class="loginBtn">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-          <!-- <ul class="item"> -->
-        <!-- <li><a [routerLink]="['/animal']" (click)="setShowMe()">
-          Adopt
-        </a></li> -->
         <li><a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn">
             Adopt
           </a>
