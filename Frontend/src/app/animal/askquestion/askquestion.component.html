@@ -6,8 +6,11 @@
           <mat-form-field>
               <input matInput placeholder="Type your question" type="text" name="Question" [(ngModel)]="Question">
           </mat-form-field>
-            <button class="submitbutton" (click)="closeDialog()" mat-button name="submit" class="btnAlign">Submit</button>
-            <button mat-button (click)="closeDialog()" class="btnAlign">Cancel</button>
+          <div>
+              <button class="submitbutton" (click)="closeDialog()" mat-button name="submit" class="btnAlign">Submit</button>
+              <button mat-button (click)="closeDialog()" class="btnAlign">Cancel</button>
+          </div>
+
           </form>
           </div>
 

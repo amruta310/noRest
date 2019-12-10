@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { LoginComponent } from './login/login.component';
@@ -14,10 +15,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 
 const routes: Routes = [
-  //{ path: '', component: DashboardViewComponent },
   { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
+  { path: 'animal/:id', component: AnimalComponent },
   { path: 'signUp/:param', component: SignUpComponent },
   { path: 'Login/:param', component: LoginComponent },
   { path: 'animaleach', component: AnimalEachComponent },

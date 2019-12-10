@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   username: string;
   donations:Donation[];
   showMe: boolean;
+  isLoggedIn: string = '';
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
   @Output() openHome: EventEmitter<object> = new EventEmitter<object>();
 
@@ -44,6 +45,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openLogin() {
+
     const dialogRef = this.dialog.open(LoginComponent, {
       width: '30%',
       height: '260px'
@@ -51,9 +53,11 @@ export class HeaderComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result != undefined){
         this.username = "Welcome " + result.name;
+        this.isLoggedIn = result._id;
         this.signIn = false;
         this.openHome.emit(event);
         this.showMe = false;
+        this.openHome.emit(event);
       }
     });
   }
