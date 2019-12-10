@@ -22,6 +22,26 @@ export class DonationComponent implements OnInit {
   ngOnInit() {}
 
   addDonation(donation) {
+    if(this.firstName === "" || this.firstName === null || this.firstName === undefined)
+      {
+        alert("Please Provide a First Name.");
+        return;
+      }
+      if(this.lastName === "" || this.lastName === null || this.lastName === undefined)
+      {
+        alert("Please Provide a Last Name.");
+        return;
+      }
+      if(this.email === "" || this.email === null || this.email === undefined)
+      {
+        alert("Please Enter an email.");
+        return;
+      }
+      if(this.donationAmount === "" || this.donationAmount === null || this.donationAmount === undefined)
+      {
+        alert("Please Enter an amount you want to donate");
+        return;
+      }
        this._http.addDonation(donation).subscribe(data => {
         for (let usr of Object.keys(data)){
 
