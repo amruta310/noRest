@@ -11,7 +11,6 @@ import { DonationComponent } from './donation/donation.component';
 import { AnimalComponent } from './animal/animal.component';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { HomeComponent } from './home/home.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 
@@ -26,7 +25,6 @@ const routes: Routes = [
   { path: 'askquestion', component: AskquestionComponent },
   { path: 'aboutUs', component: AboutusComponent},
   { path: 'contactUs', component: ContactUsComponent},
-  { path: 'home', component: HomeComponent},
   { path: 'payment/:donationAmount', component: PaymentComponent},
 ];
 

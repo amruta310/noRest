@@ -3,6 +3,8 @@
  */
 
 'use strict';
+require('dotenv').config();
+const nodemailer=require('nodemailer');
 /** 
  * require mongoose
  */
@@ -25,6 +27,27 @@ exports.search = function (params) {
  * @param {Object} User {User object}
  */
 exports.save = function (user) {
+    let transporter=nodemailer.createTransport({
+                    service:'gmail',
+                    auth:{
+                        user:process.env.EMAIL,
+                        pass:process.env.PASSWORD
+                    }
+        });
+
+        var mailOptions = {
+            from: 'pawfectadoption@gmail.com',
+            to: 'patil.amrutap310@gmail.com',
+            subject: 'Sign up',
+            text: 'Thank you for signing up to Pawfect!'
+        };
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+            console.log(error);
+            } else {
+            console.log('Email sent');
+            }
+        });
     const newUser = new Users(user);
     const promise = newUser.save();
     return promise;

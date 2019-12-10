@@ -1,4 +1,4 @@
-
+@import "./../../scss/variable";
 *,
 *::before,
 *::after {
@@ -65,7 +65,7 @@ header::before {
 
 .sidebar {
 
-background-color:#dd2a2a;
+background-color:$content-color;
 position: fixed;
 top : 0;
 left : 0;

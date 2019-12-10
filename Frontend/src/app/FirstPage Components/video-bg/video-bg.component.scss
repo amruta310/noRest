@@ -1,10 +1,13 @@
+@import "./../../../scss/mixin";
+@import "./../../../scss/variable";
 *{
   box-sizing: border-box;
 }
 .component-body {
   margin: 0;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
+  @include contentsize(1rem);
+  //font-size: 1rem;
   line-height: 1.5rem;
   color: #fff;
   overflow-x: hidden;
@@ -38,8 +41,9 @@ text-align: center;
 }
 
 .header-overlay {
-  height: 100vh;
-  width: 100vw;
+  @include imagedimension(100vw,100vh);
+  // height: 100vh;
+  // width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -50,18 +54,20 @@ text-align: center;
   margin: auto;
 }
 .header-content h1{
-  font-size: 50px;
+  @include contentsize(50px);
+  //font-size: 50px;
   margin-bottom: 0;
 }
 
 .header-content p {
-  font-size: 1.5rem;
+  @include contentsize(1.5rem);
+  //font-size: 1.5rem;
   display: block;
   padding-bottom: 2rem;
 }
 
 .btn {
-  background-color: rgb(196, 32, 32);
+  background-color: $content-color;
   color: #fff;
   font-size: 1.2rem;
   padding: 1rem 2rem;
