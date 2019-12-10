@@ -66,8 +66,10 @@ export class LoginComponent implements OnInit {
           if (data[usr].username == this.username || data[usr].password == this.password) {
             this.currentUser = data[usr];
             this.notFound = false;
-            this.outputUser.emit(this.currentUser);
+            // this.outputUser.emit(this.currentUser);
             this.dialogRef.close(this.currentUser);
+            //this._router.navigate['/'];
+            // this._router.navigate(['/animal', this.currentUser._id]);
             break;
           }
         }

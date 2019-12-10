@@ -14,10 +14,14 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn">
+        <li *ngIf="isLoggedIn != ''"><a (click)="openDashboard($event)" [routerLink]="['/animal', isLoggedIn]" mat-button class="loginBtn">
             Adopt
           </a>
         </li>
+        <li *ngIf="isLoggedIn == ''"><a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn">
+          Adopt
+        </a>
+      </li>
         <li> <a [routerLink]="['/aboutUs']" mat-button class="loginBtn" (click)="setShowMe()">
             About Us
           </a></li>
@@ -29,7 +33,7 @@
         <li *ngIf="signIn == false" class="signedInUser">{{username}}</li>
         <li *ngIf="signIn == false"><a  mat-button class="loginBtn" (click)="onSignOut()">Sign Out</a></li>
         <!-- <li><a [routerLink]="['/login']">Login</a></li> -->
-        <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openLogin()">Login</a></li>
+        <li *ngIf="signIn == true"><a mat-button class="loginBtn" [routerLink]="['']" (click)="openLogin()">Login</a></li>
         <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openSignUp()"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
         <!-- <li><a [routerLink]="['/signup']"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li> -->
         <li><a href="#">
