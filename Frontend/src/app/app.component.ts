@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +11,10 @@ export class AppComponent {
   onlyPayment: boolean;
 
   constructor() {}
+
+  ngOnInit() {
+    this.openDashboardPage = false;
+  }
 
   getDashboard(event) {
     console.log('here');

@@ -9,7 +9,7 @@ import { MatDialogRef,  MatDialogConfig } from '@angular/material';
 import { AnimalEachComponent } from './animal-each/animal-each.component';
 import { AskquestionComponent } from './askquestion/askquestion.component';
 
-
+import { ActivatedRoute, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {trigger, keyframes, animate, transition} from '@angular/animations';
@@ -41,10 +41,19 @@ export class AnimalComponent implements OnInit {
   animalEach: Animal;
   imageObject: Array<object> = [];
   animationState: string;
-
-  constructor(private _http : HttpService, public sanitizer: DomSanitizer,  public dialog: MatDialog) { }
+  param: string;
+  showAskme: boolean;
+  constructor(private _http : HttpService, public sanitizer: DomSanitizer,  public dialog: MatDialog, @Inject(ActivatedRoute) private _activatedroute : ActivatedRoute) { }
 
   ngOnInit() {
+    this.param = this._activatedroute.snapshot.params['id'];
+    if(this.param == undefined){
+      this.showAskme = false;
+    }
+    else{
+      this.showAskme = true;
+    }
+
     this._http.getAnimals().subscribe(data => {
       this.animals = data;
 

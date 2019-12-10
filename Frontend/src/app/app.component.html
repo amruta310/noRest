@@ -14,8 +14,7 @@
     <app-dashboard-view [loggedInUser]="loggedInUser"></!
     <app-animal></app-animal>
   </div> -->
-
-  <router-outlet></router-outlet>
+  <router-outlet *ngIf="openDashboardPage"></router-outlet>
 </div>
 
 
