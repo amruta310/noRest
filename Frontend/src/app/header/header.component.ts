@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
 
   constructor(private popup: SharedService, private _router: Router,  public dialog: MatDialog) {
-    this.showMe= true;
+    this.showMe = true;
     this.username = "";
     this.signIn = true;
    }

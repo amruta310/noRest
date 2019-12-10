@@ -44,7 +44,7 @@ export class AnimalComponent implements OnInit {
     this.animalEachDisplay = true;
     this.animalEach = i;
     const dialogRef = this.dialog.open(AnimalEachComponent, {
-      width: '250px',
+      width: '90%',
       data: { animalEach: this.animalEach }
     });
     dialogRef.afterClosed().subscribe(result => {

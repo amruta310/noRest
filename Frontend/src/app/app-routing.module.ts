@@ -1,3 +1,4 @@
+import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   //{ path: '', component: DashboardViewComponent },
-  { path: 'events', component: EventListComponent },
+  { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
   { path: 'signUp/:param', component: SignUpComponent },

@@ -28,5 +28,5 @@
 </div>
 
 <div *ngIf="openPayment">
-  <app-payment (loadPayment)="insideDonation()"></app-payment>
+  <app-payment (loadPayment)="insideDonation()" (amountToDonate)="donationAmount"></app-payment>
 </div>

@@ -1,56 +1,36 @@
-// .dogname{
-//   position:relative;
-//   top: 100px;
-// }
-// .animal-label{
-//   position: relative;
-//   left:20px;
-//   font-weight: bold;
-// }
-// .animal-item{
-//   position: relative;
-//   left:25px;
-// }
-// .donation-box{
-// 	background-color: grey;
-// 	width: 20%;
-// 	color: white;
-// 	text-align: center;
-// 	padding-top: 12px;
-// 	padding-bottom: 12px;
-//   font-size: 18px;
-//   bottom :10px;
-//   left:450px;
-// 	bottom: 0px;
-// 	position: absolute;
-// 	cursor: pointer;
-// 	font-weight: 800;
-// }
-.overlay {
-  // display: none;
-  // position: fixed;
-  // padding: 10px;
-  // width: 280px;
-  // left: 50%;
-  // margin-left: -150px;
-  // height: 180px;
-  // top: 50%;
-  // margin-top: -100px;
-  // background: #FFF;
-  // z-index: 20;
-  background-color: rgba(255, 255, 255, .5); /* Black background with opacity */
-  // width: '30%';
-  // height: '260px';
-  cursor: pointer; /* Add a pointer on hover */
-  .example-container {
-    display: flex;
-    flex-direction: column;
-    .btnAlign{
-      width: 50%;
+// .crossStyle{
+//   outline: none !important;
+//   padding: 0;
+//   background-color: transparent;
+//   border: 0;
+//   -webkit-appearance: none;
+
+  .overlay {
+    background-color: rgba(255, 255, 255, .5); /* Black background with opacity */
+    .crossStyle{
+      outline: none !important;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-appearance: none;
+    }
+    cursor: pointer; /* Add a pointer on hover */
+    .setImage{
+      float: left;
+      padding-right: 10px;
+      height: 260px;
+      width: 350px;
+    }
+    .example-container {
+      display: flex;
+      flex-direction: column;
+      .btnAlign{
+        width: 50%;
+      }
+    }
+
+    .example-container > * {
+      width: 100%;
     }
   }
 
-  .example-container > * {
-    width: 100%;
-  }
-}
