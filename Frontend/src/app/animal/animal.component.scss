@@ -1,4 +1,6 @@
-
+.container{
+  margin-left: 37px;
+}
 .dogimage{
   width: 100%;
 }
@@ -34,11 +36,16 @@ a:hover, a:active {
   background-color:rgb(238, 227, 227);
 }
 .example-card {
-  max-width: 400px;
+  // max-width: 400px;
+  margin-left: -12px;
+  width: 325px;
+  height: 382px;
+  margin-top: -7px;
 }
 
 .example-header-image {
   background-size: cover;
+
 }
 
 .alignDiv{
@@ -47,5 +54,21 @@ a:hover, a:active {
   border-color: rgb(196, 32, 32);
   border-radius: 5px;
 }
+.card-img-top{
+  width: 295px;
+  height: 200px;
+}
 
-
+.scrolling-wrapper {
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  white-space: nowrap;
+  height:200px;
+  overflow:auto;
+  margin:15px -300px 15px 15px;
+  padding-right:300px;
+  .card {
+    display: inline-block;
+    width:50%;
+  }
+}

@@ -34,7 +34,7 @@ export class DonationImpactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._http.gettodos().subscribe(data => {
+    this._http.getAnimals().subscribe(data => {
       this.animals = data;
 
       for (let anm of this.animals) {

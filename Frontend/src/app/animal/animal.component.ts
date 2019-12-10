@@ -12,6 +12,8 @@ import { AskquestionComponent } from './askquestion/askquestion.component';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {trigger, keyframes, animate, transition} from '@angular/animations';
+import * as kf from './keyframes';
 declare global {
   interface Window { imageUrl: any; sanitizer: any; }
 }
@@ -21,7 +23,12 @@ window.sanitizer = window.sanitizer || {};
 @Component({
   selector: 'app-animal',
   templateUrl: './animal.component.html',
-  styleUrls: ['./animal.component.scss']
+  styleUrls: ['./animal.component.scss'],
+  animations: [
+    trigger('cardAnimator', [
+      transition('* => wobble', animate(1000, keyframes(kf.wobble))),
+    ])
+  ]
 })
 
 @Injectable()
@@ -32,17 +39,41 @@ export class AnimalComponent implements OnInit {
   imageDisplay: SafeResourceUrl;
   animalEachDisplay: boolean = false;
   animalEach: Animal;
+  imageObject: Array<object> = [];
+  animationState: string;
 
   constructor(private _http : HttpService, public sanitizer: DomSanitizer,  public dialog: MatDialog) { }
 
   ngOnInit() {
-    this._http.gettodos().subscribe(data => {
+    this._http.getAnimals().subscribe(data => {
       this.animals = data;
+
+      for (let img of Object.keys(data)) {
+        // this.imageObject.push({image: this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+this.animals[img].image),
+        // thumbImage: this.animals[img].image,
+        // alt: 'alt of image',
+        // title: 'title of image'});
+      }
+      console.log(this.imageObject);
+      //
+      // console.log( this.imagesUrl);
       // for (let anm of Object.keys(this.animals)) {
       //     this.animalCommentMap.set(this.animals[anm], null);
       // }
     });
   }
+
+  startAnimation(state){
+    console.log(state);
+    if(!this.animationState){
+      this.animationState = state;
+    }
+  }
+
+  resetAnimationSTate(){
+    this.animationState = '';
+  }
+
   openDetails(i) {
     this.animalEachDisplay = true;
     this.animalEach = i;

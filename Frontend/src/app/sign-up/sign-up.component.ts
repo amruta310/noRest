@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit {
   param: string;
   currentUser: User;
   dateOfBirth: Date;
-
+  email: string;
   @Output() outputUser: EventEmitter<object> = new EventEmitter<object>();
   @Input() openDialogSignUp: boolean;
 
@@ -36,12 +36,13 @@ export class SignUpComponent implements OnInit {
     user.username = this.username;
     user.password = this.password;
     user.dob = this.dateOfBirth;
-    user.address = user.address;
-
-    console.log(user);
-    console.log(user.name);
+    user.address = this.address;
+    user.email = this.email;
     if(user.name != undefined){
       this._http.addUser(user).subscribe(data => {
+        this._http.sendMail(user).subscribe(data => {
+          console.log(data);
+        });
         this.currentUser = data;
         this.dialogRef.close(this.currentUser);
       });

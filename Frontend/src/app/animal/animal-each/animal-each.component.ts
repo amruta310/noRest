@@ -14,7 +14,6 @@ export interface DialogData {
 export class AnimalEachComponent implements OnInit {
   @Input() animalEach: Animal;
   @Output() divClicked = new EventEmitter<any>();
-
   constructor(public dialogRef: MatDialogRef<AnimalEachComponent>, @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
   public sanitizer: DomSanitizer ) {
       this.animalEach = data.animalEach;
