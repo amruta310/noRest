@@ -9,11 +9,9 @@
             <div class="wrapper">
               <div class="parent" onclick="">
                 <div class="child bg-one">
-                  <div class="grid1content">
+                    <div class="module mid">
                      <h1>ADOPT</h1>
-                     <p>Matching adoptable<br>
-                         animals with a permanent home</p>
-                     <button mat-raised-button color="warn"><a href="https://www.arlboston.org/adopt/adopt-a-pet/">Adopt a pet</a></button>
+                     <button mat-raised-button color="warn"><a (click)="openDashboard($event)" [routerLink]="['/animal']">Adopt a pet</a></button>
                      </div>
                   </div>
               </div>
@@ -23,7 +21,10 @@
             <div class="wrapper">
               <div class="parent" onclick="">
                  <div class="child bg-two">
-
+                    <div class="module mid">
+                        <h2>DOG TRAINING</h2>
+                        <button mat-raised-button color="warn"><a (click)="openDashboard($event)" [routerLink]="['/animal']">Enroll Now</a></button>
+                    </div>
                  </div>
                </div>
              </div>
@@ -32,8 +33,9 @@
                   <div class="wrapper">
                           <div class="parent" onclick="">
                               <div class="child bg-three">
-                                  <div class="grid1content">
-                                    <h1>Los Angeles</h1>
+                                  <div class="module mid">
+                                    <h1>MEDICAL CARE</h1>
+                                    <button mat-raised-button color="warn"><a (click)="openDashboard($event)" [routerLink]="['/animal']">Learn More</a></button>
                                   </div>
                               </div>
                           </div>
@@ -43,11 +45,9 @@
               <div class="wrapper">
                       <div class="parent" onclick="">
                           <div class="child bg-four">
-                            <div class="grid1content">
+                            <div class="module mid">
                               <h1>COMMUNITY PROGRAMS</h1>
-                              <p>Serving animals and people<br>
-                                where they live</p>
-                              <div><button mat-raised-button color="warn"><a routerLink="/events"> VIEW PROGRAMS</a></button></div>
+                              <button class="combutton" mat-raised-button color="warn"><a routerLink="/events"> VIEW PROGRAMS</a></button>
                               </div>
                           </div>
                       </div>
