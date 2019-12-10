@@ -35,7 +35,7 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { PaymentComponent } from './payment/payment.component';
 import { MbscModule } from '@mobiscroll/angular';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +77,9 @@ import { MbscModule } from '@mobiscroll/angular';
     MatCardModule,
     MatInputModule,
     MbscModule,
+    MatGridListModule,
     MatExpansionModule
+
   ],
   bootstrap: [AppComponent]
 })

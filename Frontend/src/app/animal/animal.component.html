@@ -1,38 +1,38 @@
 <div class="album py-5 bg-light">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="list-group-item clearfix alignDiv"  style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32)" *ngFor="let animal of animals"  (click)="openDetails(animal)">
-          <mat-card class="example-card">
-            <mat-card-header>
-                <img  mat-card-avatar class="example-header-image" [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)">
-              <mat-card-title>{{ animal.name }}</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img
-            [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
-            alt="{{ animal.name }}"
-            class="card-img-top"
-            style="max-height: 150px;">
-            <div class="card-body">
-              <p class="card-text">
-                  <label>Gender:{{ animal.gender }}</label><br>
-                  <label>Age:{{ animal.age }}</label>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Read More</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ask Question</button>
+         <div class="list-group-item clearfix alignDiv"  style="background-color: rgb(196, 32, 32);border-color:rgb(196, 32, 32); float:left; width : 30%; height: 390px;margin-right: 2px" *ngFor="let animal of animals"  (click)="openDetails(animal)">
+          <!-- <div style="float:left; width : 50%; height: 500px;" *ngFor="let animal of animals"  (click)="openDetails(animal)"> -->
+          <!-- <mat-grid-list cols="2"> -->
+            <!-- <mat-grid-tile> -->
+              <mat-card class="example-card">
+                <mat-card-header>
+                    <img  mat-card-avatar class="example-header-image" [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)">
+                  <mat-card-title>{{ animal.name }}</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img
+                [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
+                alt="{{ animal.name }}"
+                class="card-img-top"
+                style="max-height: 150px;">
+                <div class="card-body">
+                  <p class="card-text">
+                      <label>Gender:{{ animal.gender }}</label><br>
+                      <label>Age:{{ animal.age }}</label>
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" routerLink="/animaleach" class="btn btn-sm btn-outline-secondary">Read More</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Ask Question</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
                 </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </mat-card>
+              </mat-card>
+              <!-- </mat-grid-tile> -->
+            <!-- </mat-grid-list> -->
         </div>
-      </div>
-    </div>
   </div>
-</div>
 <hr>
 <!-- <div *ngIf="animalEachDisplay">
   <app-animal-each (divClicked)="callMain()" [animalEach]="animalEach"></app-animal-each>
