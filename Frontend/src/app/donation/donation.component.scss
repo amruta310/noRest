@@ -31,8 +31,8 @@
 }
 
 .donation-box .donate-button {
-	background-color: rgb(192, 34, 34);
-	width: 70%;
+	// background-color: rgb(192, 34, 34);
+	width: 100%;
 	color: white;
 	text-align: center;
 	padding-top: 12px;
@@ -41,7 +41,10 @@
 	bottom: 0px;
 	position: absolute;
 	cursor: pointer;
-	font-weight: 800;
+  font-weight: 800;
+  .btnAlign{
+    background-color: rgb(192, 34, 34);
+  }
 }
 .donate-button>a{
   color: white;
@@ -148,5 +151,12 @@
 	max-width: 96px;
 }
 
+.btnAlign{
+  top: 200px;
+  background-color: #c02222;
+  color: #ffffff;
+  outline: 0;
+  margin-right: 20px;
+  margin-left: 60px;
 
-
+}

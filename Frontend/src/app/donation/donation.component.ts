@@ -3,7 +3,7 @@ import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 // import { Donation } from '../models/Donation';
 import { HttpService } from './../http.service';
 import {Donation} from '../../../../Backend/api/models/donationSchema';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.component.html',
@@ -18,10 +18,22 @@ export class DonationComponent implements OnInit {
   openPayment: boolean = false;
   @Output() loadPayment = new EventEmitter<any>();
 
-  constructor(private _http: HttpService, public dialogRef: MatDialogRef<DonationComponent>){}
+  constructor(private _http: HttpService, public dialogRef: MatDialogRef<DonationComponent>, private router: Router){}
   ngOnInit() {}
-  addDonation(user) {
-    console.log(this.postDonation.email);
+
+  addDonation(donation) {
+       console.log(donation);
+
+       this._http.addDonation(donation).subscribe(data => {
+        for (let usr of Object.keys(data)){
+
+        }
+        this.openPayment = true;
+        this.router.navigate(['/payment', this.donationAmount]);
+        this.dialogRef.close(
+          this.loadPayment.emit()
+        );
+      });
   }
   closeComp(){
     this.openPayment = true;

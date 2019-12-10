@@ -1,31 +1,32 @@
 <!-- <mat-form-field>
   <textarea matInput></textarea>
 </mat-form-field> -->
-<div class="donation-container" *ngIf="!openPayment">
-  <form #userForm1="ngForm" (ngSubmit)="addDonation(userForm1.value)">
-  <div class="donation-box">
-    <div class="title">Donation Information</div>
-    <div class="fields">
-      <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="firstName">
-      <input type="text" name="lastName" placeholder="Last Name"  [(ngModel)]="lastName">
-      <input type="text" name="email" placeholder="Email"  [(ngModel)]="email">
+
+<div class="donation-container overlay" *ngIf="!openPayment">
+    <form #userForm1="ngForm" (ngSubmit)="addDonation(userForm1.value)">
+
+    <div class="donation-box">
+      <div class="title">Donation Information</div>
+      <div class="fields">
+        <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="firstName">
+        <input type="text" name="lastName" placeholder="Last Name"  [(ngModel)]="lastName">
+        <input type="text" name="email" placeholder="Email"  [(ngModel)]="email">
+      </div>
+
+      <div class="amount">
+        <div class="button">$<input type="text" name="donationAmount" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
+      </div>
+      <div>
+          <!-- <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a> -->
+          <button mat-button name="submit" class="btnAlign">Donate Now</button>
+          <button mat-button routerLink="" class="btnAlign">Back</button>
+          <!-- <a [routerLink]="['/payment', donationAmount]">Donate Now</!--> -->
+          <!-- <a routerLink="" class="donate-button">Back</a> -->
+      </div>
     </div>
+  </form>
+  </div>
 
-    <div class="amount">
-      <div class="button">$<input type="text" name="donationAmount" class="set-amount" placeholder=""  [(ngModel)]="donationAmount"> </div>
-    </div>
-
-    <div class="donate-button">
-        <!-- <a [routerLink]="['/payment', {donationAmount : donationAmount}]">Donate Now</a> -->
-        <a [routerLink]="['/payment', donationAmount]" (click)="closeComp()">Donate Now</a>
-        <!-- <a (click)="closeComp($event)">Donate Now</!-->
-        <a routerLink="" class="donate-button">Back</a>
-    </div>
-
-</div>
-</form>
-</div>
-
-<div *ngIf="openPayment">
-  <app-payment (loadPayment)="insideDonation()" (amountToDonate)="donationAmount"></app-payment>
-</div>
+  <div *ngIf="openPayment">
+    <app-payment (loadPayment)="insideDonation()" (amountToDonate)="donationAmount"></app-payment>
+  </div>
