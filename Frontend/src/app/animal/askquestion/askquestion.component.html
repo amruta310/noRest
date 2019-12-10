@@ -1,11 +1,16 @@
 <div class="overlay">
   <h3 mat-dialog-title>Ask Question</h3>
       <div class="example-container">
+          <form #userForm1="ngForm" (ngSubmit)="addQuestion(userForm1.value)">
+
           <mat-form-field>
-              <input matInput placeholder="Type your question" type="text" [(ngModel)]="Question" name="Question">
+              <input matInput placeholder="Type your question" type="text" name="Question" [(ngModel)]="Question">
               <!-- <app-control-messages [control]="userForm.get('username')"></app-control-messages> -->
           </mat-form-field>
             <button class="submitbutton" (click)="closeDialog()" mat-button name="submit" class="btnAlign">Submit</button>
             <button mat-button (click)="closeDialog()" class="btnAlign">Cancel</button>
+          </form>
           </div>
+
       </div>
+
