@@ -12,15 +12,18 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 
 const routes: Routes = [
   //{ path: '', component: DashboardViewComponent },
   { path: 'events', component: EventCalendarComponent },
+  { path: 'aboutus', component: AboutUsComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
   { path: 'signUp/:param', component: SignUpComponent },
   { path: 'Login/:param', component: LoginComponent },
   { path: 'animaleach', component: AnimalEachComponent },
+  { path: 'askquestion', component: AskquestionComponent },
   { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'home', component: HomeComponent},

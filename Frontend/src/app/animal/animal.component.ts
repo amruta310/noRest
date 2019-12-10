@@ -7,6 +7,9 @@ import { AnimalSchema } from './../../../../Backend/api/models/animalSchema';
 import {MatDialog,  MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatDialogRef,  MatDialogConfig } from '@angular/material';
 import { AnimalEachComponent } from './animal-each/animal-each.component';
+import { AskquestionComponent } from './askquestion/askquestion.component';
+
+
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 declare global {
@@ -49,6 +52,15 @@ export class AnimalComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
 
+    });
+    // this.dialog.open(AskquestionComponent, {
+    //   width: '90%',
+    //   data: { animalEach: this.animalEach }
+    // });
+  }
+  openQuestion(){
+    this.dialog.open(AskquestionComponent, {
+      width: '60%',
     });
   }
   callMain(){
