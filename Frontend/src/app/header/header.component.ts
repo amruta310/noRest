@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   donations:Donation[];
   showMe: boolean;
   @Output() goodToload: EventEmitter<object> = new EventEmitter<object>();
+  @Output() openHome: EventEmitter<object> = new EventEmitter<object>();
 
   constructor(private popup: SharedService, private _router: Router,  public dialog: MatDialog) {
     this.showMe = true;
@@ -32,7 +33,7 @@ export class HeaderComponent implements OnInit {
   openSignUp() {
     const dialogRef = this.dialog.open(SignUpComponent, {
       width: '30%',
-      height: '450px'
+      height: '500px'
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result != undefined){
@@ -51,7 +52,7 @@ export class HeaderComponent implements OnInit {
       if(result != undefined){
         this.username = "Welcome " + result.name;
         this.signIn = false;
-        this.goodToload.emit(result);
+        this.openHome.emit(event);
         this.showMe = false;
       }
     });
@@ -73,6 +74,7 @@ export class HeaderComponent implements OnInit {
     //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
     this.signIn = true;
     this.showMe = true;
+    this.openHome.emit(event);
   }
   // addDonation(donation:Donation)
   // {
@@ -81,6 +83,10 @@ export class HeaderComponent implements OnInit {
   //   })
   // }
   setShowMe(){
-    this.showMe = false;
+    this.goodToload.emit(event);
+  }
+
+  openMain(){
+    this.openHome.emit(event);
   }
 }
