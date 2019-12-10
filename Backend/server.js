@@ -5,7 +5,12 @@ let express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    nodemailer = require('nodemailer');
+
+var cors=require('cors');
+
+app.use(cors({origin:true,credentials: true}));
 
 
 /**
@@ -43,6 +48,32 @@ app.get('/', (req, res) => {
     res.end();
 });
 
+// app.post("/sendmail", (req, res) => {
+//     let user = req.body;
+//     sendMail(user, info => {
+//         res.send(info);
+//     })
+// });
+
+// let transporter;
+// let mailOptions ;
+// async function sendMail(){
+//     let account = await nodemailer.createTestAccount();
+//     transporter = nodemailer.createTransport({
+//         host: "smtp.ethereal.email",
+//         port: 587,
+//         secure: false,
+//         auth: {
+//             user: "mehta.al@husky.neu.edu",
+//             pass: "Northeastern@1"
+//         }
+//     });
+    
+// }
+// let info =  transporter.sendMail();
+//     console.log(info);
+
+// console.log('sent');
 /**
  * listen to port
  */

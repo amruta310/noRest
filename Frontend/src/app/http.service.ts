@@ -21,6 +21,7 @@ export class HttpService {
   private commentUrl = 'http://localhost:3000/comments';
   private userUrl = 'http://localhost:3000/users';
   private donationUrl= 'http://localhost:3000/donations';
+  private mailUrl= 'http://localhost:3000/sendMail';
   //private donationUrl = 'http://localhost:3000/donation';
 
   constructor(public _http: HttpClient) { }
@@ -29,11 +30,7 @@ export class HttpService {
   //   return this._http.post<Donation>(this.donationUrl,donation);
   // }
 
-  gettodos():Observable<AnimalSchema[]>
-  {
-    return this._http.get<AnimalSchema[]>(this.animalUrl);
 
-  }
   getAnimals() {
     return this._http.get<AnimalSchema[]>(this.animalUrl);
   }
@@ -59,5 +56,9 @@ export class HttpService {
 
   getUser() {
     return this._http.get<User>(this.userUrl);
+  }
+
+  sendMail(data){
+    return this._http.post(this.mailUrl, data);
   }
 }
