@@ -1,7 +1,8 @@
 
 
 'use strict';
-
+  require('dotenv').config();
+   const nodemailer=require('nodemailer');
 const mongoose = require('mongoose'),
     Donation = mongoose.model('Donation');
 
@@ -11,6 +12,29 @@ const mongoose = require('mongoose'),
     };
 
     exports.save = function (donation) {
+      
+       
+        let transporter=nodemailer.createTransport({
+                    service:'gmail',
+                    auth:{
+                        user:process.env.EMAIL,
+                        pass:process.env.PASSWORD
+                    }
+        });
+
+        var mailOptions = {
+            from: 'pawfectadoption@gmail.com',
+            to: 'patil.amrutap310@gmail.com',
+            subject: 'Donation',
+            text: 'Thank you for your donation to Pawfect!'
+        };
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+            console.log(error);
+            } else {
+            console.log('Email sent');
+            }
+        });
         const newDonation = new Donation(donation);
         const promise = newDonation.save();
         return promise;
