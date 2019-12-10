@@ -38,7 +38,6 @@ import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +81,6 @@ import { AskquestionComponent } from './animal/askquestion/askquestion.component
     MatInputModule,
     MatGridListModule,
     MatExpansionModule
-
   ],
   bootstrap: [AppComponent]
 })

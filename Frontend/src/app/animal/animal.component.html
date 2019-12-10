@@ -1,3 +1,19 @@
+<!-- <div class="scrolling-wrapper">
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+    <div class="card"><h2>Card</h2></div>
+  </div>
+  <mat-card class="example-card" [@cardAnimator]="animationState" (@cardAnimator.done)="resetAnimationSTate()" (swipeleft)="startAnimation('slideOutLeft')">
+  <mat-card-actions>
+    <button mat-raised-button (tap)="startAnimation('wobble')">WOBBLE</button>
+  </mat-card-actions>
+</mat-card> -->
 <div class="album py-5 bg-light">
   <div class="container">
          <div class="list-group-item clearfix alignDiv"  style=" float:left; width : 30%; height: 390px;margin-right: 2px" *ngFor="let animal of animals">
@@ -13,8 +29,7 @@
                 <img
                 [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
                 alt="{{ animal.name }}"
-                class="card-img-top"
-                style="max-height: 150px;">
+                class="card-img-top">
                 <div class="card-body">
                   <p class="card-text">
                       <label>Gender:{{ animal.gender }}</label><br>
