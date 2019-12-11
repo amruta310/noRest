@@ -34,7 +34,7 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { AboutUsComponent } from './about-us/about-us.component';
+
 
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -68,7 +68,7 @@ import { HomeComponent } from './home/home.component';
     AboutusComponent,
     ViewanimalComponent,
     DogtrainingComponent,
-    AboutUsComponent
+    AboutusComponent
   ],
   imports: [
     MbscModule,
