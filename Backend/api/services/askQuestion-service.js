@@ -8,15 +8,14 @@ const mongoose = require('mongoose'),
         const promise = Question.find(params).exec();
         return promise;
     };
-
+    
     exports.save = function (question) {
-        console.log(question);
+        console.log('why ' + question.question);
         const newQuestion = new Question(question);
         const promise = newQuestion.save();
         console.log(promise);
         return promise;
     };
-
     exports.get = function (questionId) {
         const promise = Question.findById(questionId).exec();
         return promise

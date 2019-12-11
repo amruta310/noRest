@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpService } from '../../http.service';
-
+import { Question } from '../../../../../Backend/api/models/askQuestion';
 @Component({
   selector: 'app-askquestion',
   templateUrl: './askquestion.component.html',
@@ -10,7 +10,7 @@ import { HttpService } from '../../http.service';
 export class AskquestionComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<AskquestionComponent>,public dialog: MatDialog,private _http: HttpService) { }
-  Question:string;
+  Question:Question;
   ngOnInit() {
   }
 
@@ -19,8 +19,9 @@ export class AskquestionComponent implements OnInit {
   }
   addQuestion(question) {
     console.log(question);
-    this._http.addQuestion(question).subscribe(data => {
-      console.log("1" + data);
+
+    this._http.addQuestion(this.Question).subscribe(data => {
+      console.log("1" + data.Question);
         for (let usr of Object.keys(data)){
 
         }

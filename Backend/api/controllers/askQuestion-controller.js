@@ -24,6 +24,7 @@ exports.list = function (request, response) {
         .catch(renderErrorResponse(response));
 };
 
+
 /**
  * Creates a new donation with the request JSON and
  * returns donation JSON object.
@@ -33,14 +34,17 @@ exports.list = function (request, response) {
  */
 exports.post = function (request, response) {
     const newQuestion = Object.assign({}, request.body);
+    console.log(newQuestion.question);
     const resolve = (question) => {
         response.status(200);
         response.json(question);
+        
     };
     askQuestionService.save(newQuestion)
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
+
 
 /**
  * Returns a donation object in JSON.

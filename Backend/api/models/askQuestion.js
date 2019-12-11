@@ -8,7 +8,6 @@ const Schema = mongoose.Schema;
 let askQuestionSchema = new Schema({
     question: {
         type: String,
-        required: "question is required"
     }
 }, {
     versionKey: false

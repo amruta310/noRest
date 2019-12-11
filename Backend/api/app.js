@@ -10,7 +10,8 @@ module.exports = function (app) {
     let commentSchema = require('./models/commentSchema');
     let paymentSchema = require('./models/paymentSchema');
     let donationSchema = require('./models/donationSchema');
-    let asKQuestionSchema = require('./models/askQuestion');
+    let askQuestionSchema = require('./models/askQuestion');
+    console.log(askQuestionSchema);
     //Initialize routes
     let animalRoutes = require('./routes/animal-route');
     let eventRoutes = require('./routes/event-route');

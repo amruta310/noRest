@@ -1,8 +1,7 @@
 'use strict';
 module.exports = function (app) {
-    const askQuationController = require('../controllers/askQuestion-controller');
+    const askQuestionController = require('../controllers/askQuestion-controller');
     app.route('/questions')
-        .get(askQuationController.list)
-        .post(askQuationController.post);
-
+        .get(askQuestionController.list)
+        .post(askQuestionController.post);
 };

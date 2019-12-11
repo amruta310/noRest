@@ -57,6 +57,7 @@ export class HttpService {
     return this._http.post<Donation>(this.donationUrl,donation);
   }
   addQuestion(question:Question){
+    console.log('service ' + question);
     return this._http.post<Question>(this.questionUrl,question);
   }
   getUser() {
