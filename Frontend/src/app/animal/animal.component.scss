@@ -74,6 +74,10 @@ a:hover, a:active {
   background-color: $content-color;
   border-color: $content-color;
   border-radius: 5px;
+  float:left;
+  width : 30%;
+  height: 390px;
+  margin-right: 2px
 }
 .card-img-top{
   @include imagedimension(295px,200px);
