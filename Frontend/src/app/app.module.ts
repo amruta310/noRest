@@ -34,11 +34,14 @@ import { InActionComponent } from './FirstPage Components/in-action/in-action.co
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { AskquestionComponent } from './animal/askquestion/askquestion.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AgmCoreModule } from '@agm/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutUsComponent } from './about-us/about-us.component';
+
+import { AskquestionComponent } from './animal/askquestion/askquestion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +66,8 @@ import { AgmCoreModule } from '@agm/core';
     PaymentComponent,
     AskquestionComponent,
     AboutusComponent,
-    GoogleMapsComponent
+    GoogleMapsComponent,
+    AboutUsComponent
   ],
   imports: [
     MbscModule,
@@ -81,12 +85,21 @@ import { AgmCoreModule } from '@agm/core';
     MatDatepickerModule,
     MatCardModule,
     MatInputModule,
+    MbscModule,
+    AgmCoreModule.forRoot({
+
+     apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+
+
+    }),
+
     MatGridListModule,
     MatExpansionModule,
     NgCircleProgressModule.forRoot({}),
     AgmCoreModule.forRoot({
       apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
      }),
+
   ],
   bootstrap: [AppComponent]
 })
