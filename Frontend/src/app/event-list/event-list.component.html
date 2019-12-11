@@ -14,7 +14,8 @@
                 </mat-expansion-panel-header>
                 <p>{{event.description}}</p>        
               <mat-action-row>
-                  <a mat-button class="bookingBtn" (click)="openPayment()" >Buy Tickets</a>
+                  <!-- <a mat-button class="bookingBtn" (click)="openPayment() " >Buy Tickets</a> -->
+                  <a mat-button (click)="captureId(event)">event capture</a>
               </mat-action-row>
             
             </mat-expansion-panel>

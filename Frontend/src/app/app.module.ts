@@ -1,6 +1,6 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
-import { MbscModule } from '@mobiscroll/angular';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
@@ -34,13 +34,12 @@ import { InActionComponent } from './FirstPage Components/in-action/in-action.co
 import { DonationImpactComponent } from './FirstPage Components/donation-impact/donation-impact.component';
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
-import { GoogleMapsComponent } from './google-maps/google-maps.component';
-import { AgmCoreModule } from '@agm/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { DogtrainingComponent } from './dogtraining/dogtraining.component';
 
 @NgModule({
   declarations: [
@@ -66,12 +65,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     PaymentComponent,
     AskquestionComponent,
     AboutusComponent,
-    GoogleMapsComponent,
-    AboutUsComponent,
-    AboutusComponent
+    DogtrainingComponent,
+    AboutUsComponent
   ],
-  imports: [
-    MbscModule,
+  imports: [ 
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

@@ -53,6 +53,11 @@ export class HttpService {
   addUser(user: User) {
     return this._http.post<User>(this.userUrl, user);
   }
+
+  putUser(user: User){
+    return this._http.put<User>(this.userUrl, user);
+  }
+
   addDonation(donation:Donation){
     return this._http.post<Donation>(this.donationUrl,donation);
   }
