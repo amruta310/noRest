@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +16,7 @@ export class AppComponent {
   constructor() {}
 
   ngOnInit() {
-    this.openDashboardPage = false;
+    this.openDashboardPage = true;
   }
 
   getDashboard(event) {
@@ -29,4 +32,5 @@ export class AppComponent {
   removeHome(){
     this.onlyPayment = true;
   }
+
 }

@@ -35,6 +35,8 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { DogtrainingComponent } from './dogtraining/dogtraining.component';
@@ -63,7 +65,8 @@ import { DogtrainingComponent } from './dogtraining/dogtraining.component';
     PaymentComponent,
     AskquestionComponent,
     AboutusComponent,
-    DogtrainingComponent
+    DogtrainingComponent,
+    AboutUsComponent
   ],
   imports: [ 
     MbscModule, 
@@ -81,9 +84,22 @@ import { DogtrainingComponent } from './dogtraining/dogtraining.component';
     MatDatepickerModule,
     MatCardModule,
     MatInputModule,
+    MbscModule,
+    AgmCoreModule.forRoot({
+
+     apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+
+
+    }),
+
     MatGridListModule,
     MatExpansionModule,
+
     NgCircleProgressModule.forRoot({}),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+     }),
+
   ],
   bootstrap: [AppComponent]
 })

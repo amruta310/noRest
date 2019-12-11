@@ -1,0 +1,72 @@
+
+.img {
+
+  text-align: center;
+  margin-top: 10px;
+
+ }
+
+ .container {
+
+     padding : 40px;
+
+     .head{
+
+       text-align: center;
+       font-size: 30px;
+       font-weight: bold;
+
+     }
+
+     .content {
+
+     font-size: 20px;
+
+     }
+
+     .pull-right {
+
+       position: fixed;
+       bottom : 10px;
+       right : 51px;
+       width : 4%;
+       height: 45px;
+       overflow: auto;
+       background: rgb(180, 25, 25);
+
+
+
+     }
+
+     .showScrollButton {
+
+       scroll-behavior: smooth;
+       transition-duration: 2s;
+
+     }
+
+
+     .gridAboutUS {
+
+       display: grid;
+       grid-template-columns: 400px 400px 400px;
+       margin-top: 20px;
+       margin-bottom: 20px;
+
+       .grid1, .grid2,.grid3{
+         grid-template-columns: 100px;
+
+         .c1,.c2,.c3 {
+
+           margin-top : 20px;
+           font-size : 15px;
+
+         }
+
+       }
+
+
+     }
+
+
+ }
