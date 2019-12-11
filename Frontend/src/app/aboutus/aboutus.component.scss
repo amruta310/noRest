@@ -1,44 +1,12 @@
+.maincontainer{
 
-.img {
-
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 10px;
-
- }
-
- .container {
-
-     padding : 40px;
-
-     .head{
-
-       text-align: center;
-       font-size: 30px;
-       font-weight: bold;
-
-     }
-
-     .content {
-
-     font-size: 20px;
-
-     }
-
-     .pull-right {
-
-       position: fixed;
-       bottom : 10px;
-       right : 51px;
-       width : 4%;
-       height: 45px;
-       overflow: auto;
-       background: rgb(180, 25, 25);
-
-
-
-     }
-
-     .showScrollButton {
+  font-display: arial;
+  margin-top: 15%;
+}
+.showScrollButton {
 
        scroll-behavior: smooth;
        transition-duration: 2s;
@@ -46,27 +14,31 @@
      }
 
 
-     .gridAboutUS {
-
-       display: grid;
-       grid-template-columns: 400px 400px 400px;
-       margin-top: 20px;
-       margin-bottom: 20px;
-
-       .grid1, .grid2,.grid3{
-         grid-template-columns: 100px;
-
-         .c1,.c2,.c3 {
-
-           margin-top : 20px;
-           font-size : 15px;
-
-         }
-
-       }
-
-
+     .maingrid{
+      display: grid;
+      grid-template-columns: 350px 350px 350px;
+      grid-template-rows: 350px 350px;
+      grid-gap:5px;
+      overflow: hidden;                                   /*this will hide the over flowing content of a grid and will not show that extra */
+      align-content: center;                              /*aligns al the content of page to center */
+      background-color: white;
+      position: relative;
+      padding:none;
      }
 
 
- }
+.gridcontent{
+  text-align: left;
+}
+
+
+.heading::after{
+  background:red;
+    content: "'";
+    display: block;
+    height: 4px;
+    margin: 15px auto 0;
+    text-indent: -9999px;
+    width: 44px;
+}
+
