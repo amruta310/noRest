@@ -8,12 +8,19 @@ const Schema = mongoose.Schema;
 let eventSchema = new Schema({
     title: {
         type: String,
-        required: "name is required"
+        required: "title is required"
     },
     description: {
         type: String,
         required: "description is required"
     },
+    free: {
+        type: String
+    },
+    allDay:{
+        type: Boolean
+    },
+
     location: {
         type: String,
         required: "location is required"
@@ -27,7 +34,7 @@ let eventSchema = new Schema({
         required: "amount is required"
     },
 
-    title: {
+    color: {
         type: String,
         required: "title is required"
     },
