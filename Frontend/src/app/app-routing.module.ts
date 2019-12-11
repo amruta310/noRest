@@ -16,7 +16,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 
+
 const routes: Routes = [
+ // { path: '', component: DashboardViewComponent },
+  { path: '', component: HomeComponent },
   { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
@@ -25,10 +28,11 @@ const routes: Routes = [
   { path: 'Login/:param', component: LoginComponent },
   { path: 'animaleach', component: AnimalEachComponent },
   { path: 'askquestion', component: AskquestionComponent },
-  { path: 'aboutUs', component: AboutusComponent},
+  { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'payment/:donationAmount', component: PaymentComponent},
   { path: 'viewanimal', component: ViewanimalComponent}
+
 ];
 
 @NgModule({

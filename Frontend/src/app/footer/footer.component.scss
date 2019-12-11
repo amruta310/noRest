@@ -27,6 +27,7 @@
       color: darkgrey;
       font-size: 14px;
 
+
     a:link, a:visited {
 
       color : darkgrey;
@@ -41,6 +42,22 @@
     }
 
 }
+
+
+    a:link, a:visited {
+
+      color : darkgrey;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+
+        color : red;
+
+    }
+
+
 
 // styling icon
 .fa-map-marker-alt, .fa-phone-volume,.fa-envelope {

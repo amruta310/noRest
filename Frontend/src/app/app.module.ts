@@ -1,6 +1,6 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
-import { MbscModule } from '@mobiscroll/angular';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
@@ -35,9 +35,13 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
+import { DogtrainingComponent } from './dogtraining/dogtraining.component';
+
 
 @NgModule({
   declarations: [
@@ -64,9 +68,11 @@ import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
     AskquestionComponent,
     AboutusComponent,
     ViewanimalComponent
+    DogtrainingComponent,
+    AboutUsComponent
   ],
-  imports: [
-    MbscModule,
+  imports: [ 
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -81,9 +87,22 @@ import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
     MatDatepickerModule,
     MatCardModule,
     MatInputModule,
+    MbscModule,
+    AgmCoreModule.forRoot({
+
+     apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+
+
+    }),
+
     MatGridListModule,
     MatExpansionModule,
-    NgCircleProgressModule.forRoot({})
+
+    NgCircleProgressModule.forRoot({}),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+     }),
+
   ],
   bootstrap: [AppComponent]
 })

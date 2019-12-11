@@ -1,5 +1,5 @@
 import { Component, OnInit, Host, HostBinding } from '@angular/core';
-
+import { HostListener, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -8,31 +8,36 @@ import { Component, OnInit, Host, HostBinding } from '@angular/core';
 })
 
 export class AboutUsComponent implements OnInit {
-  showScrollButton: boolean= false;
-  beginY: any;
+  isShow: boolean;
+  topPosToStartShowing = 100;
 
   constructor() { }
   ngOnInit() {
 
-    this.beginY = document.documentElement.scrollTop || document.body.scrollTop;
   }
+  @HostListener('window:scroll')
+  checkScroll() {
+      
+    // window의 scroll top
+    // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
 
-  track($event: any) {
-    console.debug('Scroll Event', $event);
-    if (this.beginY === undefined || this.beginY != null) {
-        if (this.beginY > $event.scrollY) {
-            this.showScrollButton = false;
-        }
-        else {
-            this.showScrollButton = true;
-        }
-    }
-    else {
-        this.beginY = $event.scrollY;
-        this.showScrollButton = true;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
     }
   }
 
-
-
+  // TODO: Cross browsing
+  gotoTop() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
 }
+

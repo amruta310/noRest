@@ -3,7 +3,7 @@ import { HttpService } from './../http.service';
 import {DomSanitizer, SafeUrl, SafeResourceUrl} from '@angular/platform-browser';
 import { Binary } from 'selenium-webdriver/firefox';
 import { EventSchema } from './../../../../Backend/api/models/eventSchema';
-
+import { User } from '../../../../Backend/api/models/userSchema';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {PaymentComponent} from '../payment/payment.component';
 
@@ -18,6 +18,9 @@ export class EventListComponent implements OnInit {
   eventscontent: String;
   eventTitle: EventSchema[] = [];
   eventImage: Binary;
+  eventId: String;
+  username:String = "Arati";
+  currentUser: User;
 
   panleExpanded: true;
 
@@ -26,7 +29,7 @@ export class EventListComponent implements OnInit {
   ngOnInit() {
 
     this._http.getEvents().subscribe(data => {
-      
+      this.events= data;
 
       for( let event of Object.keys(data))
       {
@@ -35,6 +38,28 @@ export class EventListComponent implements OnInit {
        console.log( this.events[0].text);
   });
 
+
+  this._http.getUser().subscribe(data => {
+      console.log(data);
+      for (let usr of Object.keys(data)){
+        if(data[usr].username == this.username )
+        {
+          this.currentUser = data[usr];
+          console.log(this.currentUser);
+          // this.currentUser.
+         
+        }
+       
+      }
+  });
+
+}
+
+captureId(event){
+  
+  this.eventId= event._id;
+  console.log(this.eventId);
+ 
 }
 
 
