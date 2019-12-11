@@ -16,6 +16,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 
 const routes: Routes = [
+  { path: '', component: AppComponent },
   { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },

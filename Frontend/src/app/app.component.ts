@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pawfect';
-  openDashboardPage: boolean;
+  openDashboardPage: boolean = false;
   loggedInUser: object;
   onlyPayment: boolean;
 
@@ -23,6 +23,7 @@ export class AppComponent {
   }
 
   openHome(event) {
+    console.log('open please');
     this.openDashboardPage = false;
   }
 
