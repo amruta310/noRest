@@ -1,6 +1,6 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
-import { MbscModule } from '@mobiscroll/angular';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
@@ -19,7 +19,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DonationComponent } from './donation/donation.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -35,8 +34,13 @@ import { DonationImpactComponent } from './FirstPage Components/donation-impact/
 import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.component';
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
+import { DogtrainingComponent } from './dogtraining/dogtraining.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EventCalendarComponent,
     PaymentComponent,
     AskquestionComponent,
-    AboutusComponent
+    AboutusComponent,
+    ViewanimalComponent,
+    DogtrainingComponent,
+    AboutUsComponent
   ],
   imports: [
     MbscModule,
@@ -79,9 +86,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     MatDatepickerModule,
     MatCardModule,
     MatInputModule,
+    MbscModule,
     MatGridListModule,
     MatExpansionModule,
+
     NgCircleProgressModule.forRoot({})
+
   ],
   bootstrap: [AppComponent]
 })

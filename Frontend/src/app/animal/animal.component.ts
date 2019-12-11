@@ -8,8 +8,8 @@ import {MatDialog,  MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatDialogRef,  MatDialogConfig } from '@angular/material';
 import { AnimalEachComponent } from './animal-each/animal-each.component';
 import { AskquestionComponent } from './askquestion/askquestion.component';
-
-import { ActivatedRoute, Router } from '@angular/router';
+import { ViewanimalComponent } from './viewanimal/viewanimal.component';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {trigger, keyframes, animate, transition} from '@angular/animations';
@@ -43,7 +43,10 @@ export class AnimalComponent implements OnInit {
   animationState: string;
   param: string;
   showAskme: boolean = false;
-  constructor(private _http : HttpService, public sanitizer: DomSanitizer,  public dialog: MatDialog, @Inject(ActivatedRoute) private _activatedroute : ActivatedRoute) { }
+
+  constructor(private _http : HttpService, public sanitizer: DomSanitizer,
+   public dialog: MatDialog, @Inject(ActivatedRoute)
+    private _activatedroute : ActivatedRoute, private _router: Router) { }
 
   ngOnInit() {
     this.param = this._activatedroute.snapshot.params['id'];
@@ -58,17 +61,10 @@ export class AnimalComponent implements OnInit {
       this.animals = data;
 
       for (let img of Object.keys(data)) {
-        // this.imageObject.push({image: this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+this.animals[img].image),
-        // thumbImage: this.animals[img].image,
-        // alt: 'alt of image',
-        // title: 'title of image'});
+
       }
       console.log(this.imageObject);
-      //
-      // console.log( this.imagesUrl);
-      // for (let anm of Object.keys(this.animals)) {
-      //     this.animalCommentMap.set(this.animals[anm], null);
-      // }
+
     });
   }
 
@@ -93,10 +89,25 @@ export class AnimalComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
 
     });
-    // this.dialog.open(AskquestionComponent, {
-    //   width: '90%',
-    //   data: { animalEach: this.animalEach }
-    // });
+  }
+  onClick(i)
+  {
+    console.log(i._id);
+    this.animalEach = i;
+    let navigateExtras : NavigationExtras = {
+            queryParams: {
+                "id": i._id,
+                "name": i.name,
+                "type": i.type,
+                "gender":i.gender,
+                "age":i.age,
+                "description":i.description,
+                "image":i.image,
+                "breed":i.breed,
+                "userId":this.param
+            }
+        };
+        this._router.navigate(['/viewanimal'], navigateExtras);
   }
   openQuestion(){
     this.dialog.open(AskquestionComponent, {

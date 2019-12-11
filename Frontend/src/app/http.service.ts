@@ -49,10 +49,20 @@ export class HttpService {
   addComment(comments: Comments) {
     return this._http.post<Comments>(this.commentUrl, comments);
   }
-
+  updateComment(comm: string, comments:Comments)
+  {
+    console.log(comm);
+    console.log(comments);
+    return this._http.put<Comments>(this.commentUrl + '/' + comm,comments);
+  }
   addUser(user: User) {
     return this._http.post<User>(this.userUrl, user);
   }
+
+  putUser(user: User){
+    return this._http.put<User>(this.userUrl, user);
+  }
+
   addDonation(donation:Donation){
     return this._http.post<Donation>(this.donationUrl,donation);
   }

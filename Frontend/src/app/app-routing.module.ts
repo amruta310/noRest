@@ -14,6 +14,8 @@ import { AnimalEachComponent } from './animal/animal-each/animal-each.component'
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -25,9 +27,10 @@ const routes: Routes = [
   { path: 'Login/:param', component: LoginComponent },
   { path: 'animaleach', component: AnimalEachComponent },
   { path: 'askquestion', component: AskquestionComponent },
-  { path: 'aboutUs', component: AboutusComponent},
   { path: 'contactUs', component: ContactUsComponent},
-  { path: 'payment/:donationAmount', component: PaymentComponent}
+  { path: 'payment/:donationAmount', component: PaymentComponent},
+  { path: 'viewanimal', component: ViewanimalComponent}
+
 ];
 
 @NgModule({
