@@ -32,7 +32,7 @@
       width : 4%;
       height: 45px;
       overflow: auto;
-      background: rgba(180, 25, 25);
+
 
 
 
@@ -52,20 +52,20 @@
       grid-template-columns: 400px 400px 400px;
       margin-top: 20px;
       margin-bottom: 20px;
-       
+
       .grid1, .grid2,.grid3{
-        grid-template-columns: 100px; 
+        grid-template-columns: 100px;
 
         .c1,.c2,.c3 {
-          
+
           margin-top : 20px;
           font-size : 15px;
-    
+
         }
 
       }
 
-      
+
     }
 
 
