@@ -18,8 +18,7 @@ import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
- // { path: '', component: DashboardViewComponent },
-  { path: '', component: HomeComponent },
+
   { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
@@ -30,7 +29,8 @@ const routes: Routes = [
   { path: 'askquestion', component: AskquestionComponent },
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'payment/:donationAmount', component: PaymentComponent},
-  { path: 'viewanimal', component: ViewanimalComponent}
+  { path: 'viewanimal', component: ViewanimalComponent},
+  {path: 'aboutUs', component: AboutusComponent}
 
 ];
 
