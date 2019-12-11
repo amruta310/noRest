@@ -2,6 +2,7 @@
 @import "./../../scss/variable";
 
 
+// styling the main grid container
 .mainc {
   display: grid;
   max-width: $grid__bp-md * 1px;
@@ -17,6 +18,7 @@
   width: 60px;
 }
 
+// styling for downloaded container
 .downloadPDF {
     background-color: white;
     border-radius: 11px;
@@ -46,6 +48,8 @@
 .gradient {
   position: relative;
 }
+
+// adding after for gradient
 .gradient:after {
   content: "Gradient Text";
   color: #000;
@@ -68,6 +72,7 @@
 .height {
   min-height: 200px;
 }
+
 
 .table > tbody > tr > .emptyrow {
   border-top: none;

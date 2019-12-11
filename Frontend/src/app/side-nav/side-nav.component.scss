@@ -9,6 +9,7 @@ box-sizing : border-box;
 
 }
 
+// styling side nav bar
 html {
 
   font-family : 'Roboto', sans-serif;
@@ -47,6 +48,7 @@ z-index: 2000;
 
 }
 
+// before styling for header
 header::before {
 
   content : '';
@@ -63,6 +65,7 @@ header::before {
 
 }
 
+// side bar styling
 .sidebar {
 
 background-color:$content-color;
@@ -80,6 +83,7 @@ z-index: 1000;
 transition : transform .6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
+// styling nav list items and action styling
 
 .nav-list {
 
@@ -146,6 +150,7 @@ color : rgba(255, 255, 255, .8);
 
 }
 
+// styling icon and its behaviour
 .icon-link {
 
   width: 5rem;
@@ -199,6 +204,8 @@ section {
   //background-color: #1f253d;
 
 }
+
+// active styling
 
 .active .fa-times{
 
