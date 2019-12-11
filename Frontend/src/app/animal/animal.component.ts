@@ -43,6 +43,7 @@ export class AnimalComponent implements OnInit {
   animationState: string;
   param: string;
   showAskme: boolean = false;
+
   constructor(private _http : HttpService, public sanitizer: DomSanitizer,
    public dialog: MatDialog, @Inject(ActivatedRoute)
     private _activatedroute : ActivatedRoute, private _router: Router) { }
