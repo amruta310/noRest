@@ -34,12 +34,7 @@ exports.save = function (user) {
                         pass:process.env.PASSWORD
                     }
         });
-<<<<<<< HEAD
-        console.log(user);
-
-=======
         console.log(' --- user ' + user);
->>>>>>> cd35ca54c070dd60cf9f6d86237b1e3397adf6d2
         var mailOptions = {
             from: 'pawfectadoption@gmail.com',
             to: user.email,

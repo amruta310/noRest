@@ -10,7 +10,7 @@ import { Question } from '../../../../../Backend/api/models/askQuestion';
 export class AskquestionComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<AskquestionComponent>,public dialog: MatDialog,private _http: HttpService) { }
-  Question:Question;
+  Question:string;
   ngOnInit() {
   }
 
@@ -20,7 +20,7 @@ export class AskquestionComponent implements OnInit {
 
   addQuestion(ques) {
     this._http.addQuestion(ques).subscribe(data => {
-      console.log('inside first ' + data);
+      //console.log('inside first ' + data);
     });
   }
 }

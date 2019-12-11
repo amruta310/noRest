@@ -10,7 +10,6 @@ let commentSchema = new Schema({
         type: String,
         required: "comment is required"
     },
-    
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'Users',
