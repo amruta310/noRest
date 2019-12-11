@@ -40,7 +40,7 @@
         <li *ngIf="signIn == false" class="signedInUser">{{username}}</li>
         <li *ngIf="signIn == false"><a  mat-button class="loginBtn" (click)="onSignOut()">Sign Out</a></li>
         <!-- <li><a [routerLink]="['/login']">Login</a></li> -->
-        <li *ngIf="signIn == true"><a mat-button class="loginBtn" [routerLink]="['']" (click)="openLogin()">Login</a></li>
+        <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openLogin()">Login</a></li>
         <li *ngIf="signIn == true"><a mat-button class="loginBtn" (click)="openSignUp()"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
         <!-- <li><a [routerLink]="['/signup']"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li> -->
         <li><a href="#">
