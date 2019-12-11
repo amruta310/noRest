@@ -1,21 +1,4 @@
 # Animal Adoption noREST project 
-
-noRest project is a platform where a user can sign up or login and see animal list.User can also ask questions about each animal.User can go through all the events happening in the city for adoption arranged my our Pawfect organization.
-
-## Installation
-
-Use angular v8.2.20,nodejs v10.16.3 and mongoDB database
-
-```bash
-npm init
-npm install
-npm i express
-npm i mongoose
-
-```
-
-
-# Animal Adoption noREST project 
 noRest project is a platform where a user can sign up or login and see animal list. User can also ask questions about each animal.User can go through all the events happening in the city for adoption arranged my our Pawfect organization.
 
 
@@ -29,6 +12,7 @@ noRest project is a platform where a user can sign up or login and see animal li
 7. Mobiscoll angular calendar to display events.
 
 ## Installation
+Use angular v8.2.20,nodejs v10.16.3 and mongoDB database
 ### To run NodeJS
 1. Clone the repository `git clone git@github.com:neu-mis-info6150-fall-2019/final-project-norest.git`.
 2. Navigate to project directory `cd final-project-norest/Backend`.
