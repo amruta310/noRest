@@ -59,10 +59,8 @@ export class SignUpComponent implements OnInit {
       return;
     }
     else{
-      let check = this.isEmail(this.email);
-      if(!check){
-        alert("Please enter valid Email");
-      }
+      alert("Please enter correct email address");
+      return;
     }
     if(this.dateOfBirth == undefined) {
       alert("Please enter a date.");
@@ -85,8 +83,8 @@ export class SignUpComponent implements OnInit {
         let serchfind:boolean;
         let regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         serchfind = regexp.test(search);
-        console.log(serchfind);
-        return serchfind;
+        console.log(serchfind)
+        return serchfind
     }
 
   onNoClick(): void {

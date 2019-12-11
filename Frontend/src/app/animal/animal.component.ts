@@ -42,8 +42,7 @@ export class AnimalComponent implements OnInit {
   imageObject: Array<object> = [];
   animationState: string;
   param: string;
-  showAskme: boolean = false;
-
+  showAskme: boolean;
   constructor(private _http : HttpService, public sanitizer: DomSanitizer,
    public dialog: MatDialog, @Inject(ActivatedRoute)
     private _activatedroute : ActivatedRoute, private _router: Router) { }

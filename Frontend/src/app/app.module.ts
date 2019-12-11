@@ -35,7 +35,6 @@ import { VideoBgComponent } from './FirstPage Components/video-bg/video-bg.compo
 import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AboutUsComponent } from './about-us/about-us.component';
-
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
@@ -89,8 +88,7 @@ import { HomeComponent } from './home/home.component';
     MbscModule,
     MatGridListModule,
     MatExpansionModule,
-
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
 
   ],
   bootstrap: [AppComponent]
