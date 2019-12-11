@@ -1,6 +1,6 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
-import { MbscModule } from '@mobiscroll/angular';
 import { AnimalEachComponent } from './animal/animal-each/animal-each.component';
 import { AnimalComponent } from './animal/animal.component';
 import { MaterialModule } from './material.module';
@@ -37,6 +37,7 @@ import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { DogtrainingComponent } from './dogtraining/dogtraining.component';
 
 @NgModule({
   declarations: [
@@ -61,10 +62,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EventCalendarComponent,
     PaymentComponent,
     AskquestionComponent,
-    AboutusComponent
+    AboutusComponent,
+    DogtrainingComponent
   ],
-  imports: [
-    MbscModule,
+  imports: [ 
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
