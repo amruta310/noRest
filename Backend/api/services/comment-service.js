@@ -22,7 +22,7 @@ const mongoose = require('mongoose'),
 
     exports.update = function (comment) {
         comment.modified_date = new Date();
-        const promise = Comment.findOneAndUpdate({_id: comment._id},Comment).exec();
+        const promise = Comment.updateOne({_id: comment._id},comment);
         //const promise = Comment.findOneAndUpdate({_id: Comment._id},Comment, {new: true});
         return promise;
     };
