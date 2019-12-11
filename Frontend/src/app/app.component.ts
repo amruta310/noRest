@@ -16,7 +16,7 @@ export class AppComponent {
   constructor() {}
 
   ngOnInit() {
-    this.openDashboardPage = true;
+    this.openDashboardPage = false;
   }
 
   getDashboard(event) {
