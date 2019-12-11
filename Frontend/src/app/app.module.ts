@@ -19,6 +19,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DonationComponent } from './donation/donation.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -40,7 +41,7 @@ import { AskquestionComponent } from './animal/askquestion/askquestion.component
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 import { DogtrainingComponent } from './dogtraining/dogtraining.component';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -66,12 +67,12 @@ import { HomeComponent } from './home/home.component';
     PaymentComponent,
     AskquestionComponent,
     AboutusComponent,
-    ViewanimalComponent,
+    ViewanimalComponent
     DogtrainingComponent,
     AboutUsComponent
   ],
-  imports: [
-    MbscModule,
+  imports: [ 
+    MbscModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -87,10 +88,20 @@ import { HomeComponent } from './home/home.component';
     MatCardModule,
     MatInputModule,
     MbscModule,
+    AgmCoreModule.forRoot({
+
+     apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+
+
+    }),
+
     MatGridListModule,
     MatExpansionModule,
 
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+     }),
 
   ],
   bootstrap: [AppComponent]
