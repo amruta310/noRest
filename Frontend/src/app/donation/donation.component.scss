@@ -4,12 +4,12 @@
 // styling container and box
 
 .donation-container {
-	height: 1000px;
+	height: 300px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 12px;
 	text-transform: uppercase;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .donation-box {
@@ -39,7 +39,7 @@
 }
 
 
-//added scss styling 
+//added scss styling
 
 .donation-box .donate-button {
 	// background-color: rgb(192, 34, 34);
@@ -144,7 +144,7 @@
 	background-color: white;
 }
 
-// styling default box content 
+// styling default box content
 .donation-box .amount .button input {
 	min-width: 34px;
 	font-size: 20px;
