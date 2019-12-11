@@ -14,11 +14,11 @@ export class AskquestionComponent implements OnInit {
   ngOnInit() {
   }
 
-  closeDialog(){
+  closeDialog(){                                                                                                                                    //to close dialog box
     this.dialogRef.close();
   }
 
-  addQuestion(ques) {
+  addQuestion(ques) {                                                                                                                                //to submit question in the database
     this._http.addQuestion(ques).subscribe(data => {
       //console.log('inside first ' + data);
     });

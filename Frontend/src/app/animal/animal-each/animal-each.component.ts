@@ -14,19 +14,26 @@ export interface DialogData {
 export class AnimalEachComponent implements OnInit {
   @Input() animalEach: Animal;
   @Output() divClicked = new EventEmitter<any>();
+  breed: string;                                                                                    //adding attributes for animal data
+  gender: string;
+  age: string;
+  health: string;
+  description: string;
+  name: string;
+  image: string;
   constructor(public dialogRef: MatDialogRef<AnimalEachComponent>, @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
-  public sanitizer: DomSanitizer ) {
+  public sanitizer: DomSanitizer ) {                                                                                                                      //using sanitizer to display images which are in binary format
       this.animalEach = data.animalEach;
   }
 
   ngOnInit() {
   }
 
-  onClick(event) {
+  onClick(event) {                                                                                                                                        //on click to get see animal details
     this.divClicked.emit(true);
   }
 
-  closeDialog(){
+  closeDialog(){                                                                                                                                           //to close the dialog
     this.dialogRef.close();
   }
 }
