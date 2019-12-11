@@ -24,12 +24,6 @@ export class AnimalEachComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<AnimalEachComponent>, @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
   public sanitizer: DomSanitizer ) {                                                                                                                      //using sanitizer to display images which are in binary format
       this.animalEach = data.animalEach;
-      this.breed = data.animalEach.breed;
-      this.gender = data.animalEach.gender;
-      this.health = data.animalEach.health;
-      this.description = data.animalEach.description;
-      this.name = data.animalEach.name;
-      this.image = data.animalEach.image;
   }
 
   ngOnInit() {

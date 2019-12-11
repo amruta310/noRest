@@ -10,16 +10,32 @@
           <br>
       </div>
       <h3 mat-dialog-title>Comments</h3>
-      <form #userForm1="ngForm" class="form-inline" (ngSubmit)="updateComment(userForm1.value)">
-          <div class="form-group">
+      <form #userForm1="ngForm" (ngSubmit)="updateComment(userForm1.value)">
+          <div class="example-container">
+              <mat-form-field>
+                  <input matInput  class="form-control" id="comment" type="text"  placeholder="Your comments" name="comment" [(ngModel)]="comment"/>"!inputDisable" class="form-control" id="comment" disabled=false type="text"  placeholder="Your comments" name="comment" [(ngModel)]="comment"/>
+              </mat-form-field>
+              <div mat-dialog-actions>
+                  <button class="btn btn-default" type="submit" > Add</button>
+                  <button  id="update" class="btn btn-default" (click)="edit()">Update</button>
+              </div>
+           </div>
+      </form>
+      <!--<form #userForm1="ngForm" class="form-inline" (ngSubmit)="updateComment(userForm1.value)">
+          <div class="form-group" *ngIf="inputDisable">
+
+              <input class="form-control" id="comment" type="text" [disabled] placeholder="Your comments" name="comment" [(ngModel)]="comment"/>
+          </div>
+          <div class="form-group" *ngIf="!inputDisable">
+
               <input class="form-control" id="comment" type="text" placeholder="Your comments" name="comment" [(ngModel)]="comment"/>
           </div>
           <div class="form-group">
-              <button class="btn btn-default" type="submit"> Add</button>
-              <button class="btn btn-default" (click)="edit()"> Update</button>
+              <button class="btn btn-default" type="submit" > Add</button>
+              <button class="btn btn-default" (click)="edit()">Update</button>
           </div>
 
-      </form>
+      </form> -->
   </div>
 
 
