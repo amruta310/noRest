@@ -10,7 +10,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
-  name: string;
+  name: string;                                                                       //defining attributes for sign up
   username: string;
   password: string;
   address: string;

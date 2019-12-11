@@ -26,6 +26,7 @@ export class ViewanimalComponent implements OnInit {
   imageObject: Array<object> = [];
   commentId:string;
   comm: any;
+
   ngOnInit() {
     this._router.queryParams.subscribe(params => {
       this.id = params["id"];
@@ -37,28 +38,24 @@ export class ViewanimalComponent implements OnInit {
       this.breed=params["breed"];
       this.imageUrl=params["image"];
       this.userId=params["userId"];
-      console.log(this.userId);
-      console.log(this.description);
     })
   }
 
 updateComment(comm) {
-  console.log('here');
-
     comm.animalId = this.id;
     comm.userId = this.userId;
     comm.comment = this.comment;
     this._http.addComment(comm).subscribe(data => {
 
         this.commentId=data._id;
-        console.log('??' +this.commentId);
     });
+
   }
   edit()
   {
     console.log('comment Id ' + this.commentId);
     this._http.updateComment(this.commentId,this.comment).subscribe(data=>{
-      console.log('data ' + data);
+
     });
   }
 }
