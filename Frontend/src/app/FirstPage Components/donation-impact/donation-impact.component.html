@@ -24,7 +24,7 @@
         <div class="box b">
           <div class="A">
               <div class="donationcontentgrid B ">
-                <h1><mat-icon class="icons">home</mat-icon></h1>
+                <!-- <h1><mat-icon class="icons">home</mat-icon></h1> -->
                   
                     <h1>{{ countStatus }}</h1>
                     <h4>animals found their forever homes</h4> 
@@ -34,6 +34,7 @@
         </div>
         <div class="box c">
             <div class="A">
+              <!-- added progressing circle from material -->
             <div class="donationcontentgrid C">
                 <circle-progress
                 [percent]="percentadopted"
@@ -53,7 +54,7 @@
                 [titleColor]="'#ffffff'"
                 [unitsColor]="'#ffffff'"
               ></circle-progress>             
-                  <!-- <h1>{{ percentadopted }}%</h1> -->
+                 
                   <h4>of animals were adopted, returned to field/owner, or transferred<br>
                     <h5>(live release rate) </h5></h4>
             </div>
@@ -62,7 +63,7 @@
         <div class="box d">
             <div class="A">
             <div class="donationcontentgrid D"> 
-                     
+                     <!-- added values from db  -->
                   <h1>{{veterinarycarecount}}</h1>
                   <h4>animals were given access to high-quality, affordable veterinary care right in their community</h4> 
             </div>

@@ -1,5 +1,8 @@
 @import "./../../scss/variable";
 
+
+// styling container and box
+
 .donation-container {
 	height: 1000px;
 	font-family: 'Montserrat', sans-serif;
@@ -20,6 +23,9 @@
 	margin-right: auto;
 }
 
+
+// styled box title
+
 .donation-box .title {
 	background-color: $content-color;
 	width: 100%;
@@ -31,6 +37,9 @@
 	padding-bottom: 12px;
 	font-size: 15px;
 }
+
+
+//added scss styling 
 
 .donation-box .donate-button {
 	// background-color: rgb(192, 34, 34);
@@ -48,9 +57,13 @@
     background-color: rgb(192, 34, 34);
   }
 }
+
+
 .donate-button>a{
   color: white;
 }
+
+// styled box fields
 
 .donation-box .fields {
 	width: 59%;
@@ -72,6 +85,9 @@
 	margin-bottom: 10px;
 	-webkit-font-smoothing: antialiased;
 }
+
+
+// styled all defaults
 
 ::-webkit-input-placeholder {
    color: #cdcdcd;
@@ -101,6 +117,7 @@
 	right: 15px;
 }
 
+// styled button
 .donation-box .amount .button {
 	width: 100%;
 	background-color: rgb(192, 34, 34);
@@ -127,6 +144,7 @@
 	background-color: white;
 }
 
+// styling default box content 
 .donation-box .amount .button input {
 	min-width: 34px;
 	font-size: 20px;

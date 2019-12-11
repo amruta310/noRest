@@ -14,7 +14,7 @@
                 </mat-expansion-panel-header>
                 <p>{{event.text}}</p>        
               <mat-action-row>
-                  <a mat-button class="bookingBtn"  >Buy Tickets</a>
+                  <a mat-button class="bookingBtn" (click)="openPayment()" >Buy Tickets</a>
               </mat-action-row>
             
             </mat-expansion-panel>
