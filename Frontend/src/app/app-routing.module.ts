@@ -16,6 +16,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 const routes: Routes = [
  // { path: '', component: DashboardViewComponent },
@@ -30,14 +31,9 @@ const routes: Routes = [
   { path: 'askquestion', component: AskquestionComponent },
   { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
-<<<<<<< HEAD
   { path: 'payment/:donationAmount', component: PaymentComponent},
   { path: 'maps', component: GoogleMapsComponent}
 
-
-=======
-  { path: 'payment/:donationAmount', component: PaymentComponent}
->>>>>>> 70b2933982a69e308e019e26b711ea05248a4c3b
 ];
 
 @NgModule({
