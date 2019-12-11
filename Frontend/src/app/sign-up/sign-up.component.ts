@@ -62,7 +62,7 @@ export class SignUpComponent implements OnInit {
       alert("Please enter correct email address");
       return;
     }
-    if(this.dateOfBirth == undefined || this.dateOfBirth == "") {
+    if(this.dateOfBirth == undefined) {
       alert("Please enter a date.");
         return;
     }
