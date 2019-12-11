@@ -39,7 +39,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 import { DogtrainingComponent } from './dogtraining/dogtraining.component';
+
 
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { DogtrainingComponent } from './dogtraining/dogtraining.component';
     PaymentComponent,
     AskquestionComponent,
     AboutusComponent,
+    ViewanimalComponent
     DogtrainingComponent,
     AboutUsComponent
   ],

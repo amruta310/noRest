@@ -14,9 +14,8 @@ import { AnimalEachComponent } from './animal/animal-each/animal-each.component'
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
-import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
+
 
 const routes: Routes = [
  // { path: '', component: DashboardViewComponent },
@@ -32,7 +31,7 @@ const routes: Routes = [
   { path: 'aboutUs', component: AboutUsComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'payment/:donationAmount', component: PaymentComponent},
-  { path: 'maps', component: GoogleMapsComponent}
+  { path: 'viewanimal', component: ViewanimalComponent}
 
 ];
 
