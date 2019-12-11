@@ -14,6 +14,7 @@ import { AnimalEachComponent } from './animal/animal-each/animal-each.component'
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 
 const routes: Routes = [
   { path: 'events', component: EventCalendarComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'askquestion', component: AskquestionComponent },
   { path: 'aboutUs', component: AboutusComponent},
   { path: 'contactUs', component: ContactUsComponent},
-  { path: 'payment/:donationAmount', component: PaymentComponent}
+  { path: 'payment/:donationAmount', component: PaymentComponent},
+  { path: 'viewanimal', component: ViewanimalComponent}
 ];
 
 @NgModule({

@@ -37,6 +37,7 @@ import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EventCalendarComponent,
     PaymentComponent,
     AskquestionComponent,
-    AboutusComponent
+    AboutusComponent,
+    ViewanimalComponent
   ],
   imports: [
     MbscModule,

@@ -20,9 +20,10 @@ const mongoose = require('mongoose'),
         return promise
     };
 
-    exports.update = function (Comment) {
-        Comment.modified_date = new Date();
-        const promise = Comment.findOneAndUpdate({_id: Comment._id},Comment).exec();
+    exports.update = function (comment) {
+        comment.modified_date = new Date();
+        const promise = Comment.findOneAndUpdate({_id: comment._id},Comment).exec();
+        //const promise = Comment.findOneAndUpdate({_id: Comment._id},Comment, {new: true});
         return promise;
     };
 
