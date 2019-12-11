@@ -40,6 +40,7 @@ export class HeaderComponent implements OnInit {
       if(result != undefined){
         this.username = "Welcome " + result.name;
         this.signIn = false;
+        this.isLoggedIn = result._id;
       }
     });
   }
@@ -57,7 +58,6 @@ export class HeaderComponent implements OnInit {
         this.signIn = false;
         this.openHome.emit(event);
         this.showMe = false;
-        this.openHome.emit(event);
       }
     });
   }
@@ -78,7 +78,9 @@ export class HeaderComponent implements OnInit {
     //this._router.navigate(['/signUpOrLogin' + '/SignUp']);
     this.signIn = true;
     this.showMe = true;
+    this._router.navigate(['/']);
     this.openHome.emit(event);
+    this.isLoggedIn = "";
   }
   // addDonation(donation:Donation)
   // {
@@ -86,11 +88,11 @@ export class HeaderComponent implements OnInit {
   //     this.donations.push(donation);
   //   })
   // }
-  setShowMe(){
+  setShowMe() {
     this.goodToload.emit(event);
   }
 
-  openMain(){
+  openMain() {
     this.openHome.emit(event);
   }
 }
