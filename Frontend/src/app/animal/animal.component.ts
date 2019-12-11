@@ -79,6 +79,10 @@ export class AnimalComponent implements OnInit {
     this.animationState = '';
   }
 
+  /**
+   * Open animal card on click
+   * @param i
+   */
   openDetails(i) {
     this.animalEachDisplay = true;
     this.animalEach = i;
@@ -90,6 +94,13 @@ export class AnimalComponent implements OnInit {
 
     });
   }
+
+  /**
+   *Route to View animal component to comment
+   *
+   * @param {*} i
+   * @memberof AnimalComponent
+   */
   onClick(i)
   {
     console.log(i._id);
@@ -109,6 +120,11 @@ export class AnimalComponent implements OnInit {
         };
         this._router.navigate(['/viewanimal'], navigateExtras);
   }
+  /**
+   *Open Ask me
+   *
+   * @memberof AnimalComponent
+   */
   openQuestion(){
     this.dialog.open(AskquestionComponent, {
       width: '60%',

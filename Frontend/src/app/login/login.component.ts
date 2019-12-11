@@ -44,7 +44,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
   }
-
+/**
+ * Fetch Logged in user if valid
+ * @param user
+ */
   getUser(user) {
     // if (this.userForm.dirty && this.userForm.valid) {
     //   alert(`Name: ${this.userForm.value.name} Email: ${this.userForm.value.email}`);
@@ -80,7 +83,9 @@ export class LoginComponent implements OnInit {
       });
     // }
   }
-
+  /**
+   * Close dialog on cancel
+   */
   onNoClick(): void {
     this.dialogRef.close();
   }

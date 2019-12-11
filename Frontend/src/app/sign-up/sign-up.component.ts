@@ -30,6 +30,10 @@ export class SignUpComponent implements OnInit {
 
   }
 
+  /**
+   * Save User who just signed Up
+   * @param user
+   */
   saveUser(user) {
     user.type = 'User';
     user.name = this.name;
@@ -80,6 +84,10 @@ export class SignUpComponent implements OnInit {
     }
   }
 
+  /**
+   * Check Email validation with regex
+   * @param search
+   */
   isEmail(search:string):boolean
     {
         let serchfind:boolean;
@@ -89,6 +97,9 @@ export class SignUpComponent implements OnInit {
         return serchfind;
     }
 
+    /**
+     * Close dialog on cross
+     */
   onNoClick(): void {
     this.dialogRef.close();
   }

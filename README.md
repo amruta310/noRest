@@ -23,6 +23,9 @@ Use angular v8.2.20,nodejs v10.16.3 and mongoDB database
 7. Run `npm i nodemon`.
 8. Run `npm i body-parser`.
 8. Run `npm i nodemailer`.
+9. Run `npm i cors`.
+10. Run `npm i dotenv`.
+
 ### To run angular app
 1. Navigate to project directory `cd final-project-norest/Frontend`.
 2. npm i -g @angular/cli 

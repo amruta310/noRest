@@ -35,10 +35,20 @@ export class AnimalEachComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   *Send event to Parent
+   *
+   * @param {*} event
+   * @memberof AnimalEachComponent
+   */
   onClick(event) {                                                                                                                                        //on click to get see animal details
     this.divClicked.emit(true);
   }
-
+  /**
+   *Close dialog
+   *
+   * @memberof AnimalEachComponent
+   */
   closeDialog(){                                                                                                                                           //to close the dialog
     this.dialogRef.close();
   }
