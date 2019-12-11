@@ -24,9 +24,9 @@ const mongoose = require('mongoose'),
 
         var mailOptions = {
             from: 'pawfectadoption@gmail.com',
-            to: 'patil.amrutap310@gmail.com',
+            to:  user.email,
             subject: 'Donation',
-            text: 'Thank you for your donation to Pawfect!'
+            text: 'Thank you  ' + user.username + ' for your donation to Pawfect!'
         };
         transporter.sendMail(mailOptions, function(error, info){
             if (error) {

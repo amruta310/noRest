@@ -17,16 +17,10 @@ export class AskquestionComponent implements OnInit {
   closeDialog(){
     this.dialogRef.close();
   }
-  addQuestion(question) {
-    console.log(question);
 
-    this._http.addQuestion(this.Question).subscribe(data => {
-      console.log("1" + data.Question);
-        for (let usr of Object.keys(data)){
-
-        }
-        //this.dialogRef.close();
-      });
+  addQuestion(ques) {
+    this._http.addQuestion(ques).subscribe(data => {
+      console.log('inside first ' + data);
+    });
   }
-
 }

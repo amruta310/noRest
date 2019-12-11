@@ -56,15 +56,16 @@ export class HttpService {
   addDonation(donation:Donation){
     return this._http.post<Donation>(this.donationUrl,donation);
   }
-  addQuestion(question:Question){
-    console.log('service ' + question);
-    return this._http.post<Question>(this.questionUrl,question);
+
+  addQuestion(question: Question){
+    return this._http.post<Question>(this.questionUrl, question);
   }
   getUser() {
     return this._http.get<User>(this.userUrl);
   }
 
   sendMail(data){
+    console.log('In service ' + data);
     return this._http.post(this.mailUrl, data);
   }
 }

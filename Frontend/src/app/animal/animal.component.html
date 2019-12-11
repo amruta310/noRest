@@ -11,15 +11,15 @@
                 <img
                 [src]="sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64, '+animal.image)"
                 alt="{{ animal.name }}"
-                class="card-img-top">
+                class="card-img-top" (click)="openDetails(animal)" >
                 <div class="card-body">
-                  <p class="card-text">
+                  <p class="card-text" (click)="openDetails(animal)" >
                       <label>Gender:{{ animal.gender }}</label><br>
                       <label>Age:{{ animal.age }}</label>
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" (click)="openDetails(animal)" class="btn btn-sm btn-outline-secondary">Read More</button>
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Read More</button> -->
                       <button type="button" (click)="openQuestion()" class="btn btn-sm btn-outline-secondary" *ngIf="showAskme">Ask Question</button>
                     </div>
                   </div>

@@ -33,25 +33,30 @@ export class DonationImpactComponent implements OnInit {
    
   }
 
+  /**
+   * here we pull all the list of animals and pull out the count of animals which are adopted or which are filed under cruelty case
+   */
   ngOnInit() {
+
+    // get all the animals list
+
     this._http.getAnimals().subscribe(data => {
       this.animals = data;
 
       for (let anm of this.animals) {
-         
+        // filtering the animals which are adopted 
         this.animalcount = this.animalcount + 1 ;
         if( anm.status == "Adopted")
         {
             this.countStatus = this.countStatus + 1 ;
             this.percentadopted = ((this.countStatus/this.animalcount)*100);
 
-            // console.log(this.percentadopted);
-            // console.log(this.countStatus);
         }
+        // filtering all the list of animals of cruelty case
       if ( anm.crueltyCase == "yes")
         {
             this.crueltycase = this.crueltycase + 1;
-            // console.log(this.crueltycase);
+           
         }
 
     }

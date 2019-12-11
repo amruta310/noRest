@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
  * schema maps to a MongoDB collection and defines the shape of the documents within that collection.
  */
 let askQuestionSchema = new Schema({
-    question: {
+    Question: {
         type: String,
     }
 }, {
