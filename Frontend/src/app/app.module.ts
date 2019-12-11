@@ -81,7 +81,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     MatInputModule,
     MatGridListModule,
     MatExpansionModule,
-    NgCircleProgressModule.forRoot({}),
+    NgCircleProgressModule.forRoot({})
   ],
   bootstrap: [AppComponent]
 })
