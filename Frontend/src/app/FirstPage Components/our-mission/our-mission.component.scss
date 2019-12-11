@@ -35,14 +35,13 @@
 
 }
 
+// wrote code as parent and child where we can change the background configuration on hover
 .wrapper {
-    // padding: 50px 50px;
-    // max-width: 1200px;
+    
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    // margin-top: 80px;
-}
+}   
 
 .right {float: right !important;}
 /* Image zoom on hover + Overlay colour */
@@ -144,7 +143,7 @@
 
 
 }
-
+// style for all the h4 below div
 div > h4
 {
     font-weight: bolder;

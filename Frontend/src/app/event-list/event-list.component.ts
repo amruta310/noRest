@@ -4,6 +4,9 @@ import {DomSanitizer, SafeUrl, SafeResourceUrl} from '@angular/platform-browser'
 import { Binary } from 'selenium-webdriver/firefox';
 import { EventSchema } from './../../../../Backend/api/models/eventSchema';
 
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {PaymentComponent} from '../payment/payment.component';
+
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
@@ -18,7 +21,7 @@ export class EventListComponent implements OnInit {
 
   panleExpanded: true;
 
-  constructor(private _http : HttpService, public sanitizer: DomSanitizer) { }
+  constructor(private _http : HttpService, public sanitizer: DomSanitizer, public dialog: MatDialog) { }
 
   ngOnInit() {
 
@@ -32,5 +35,10 @@ export class EventListComponent implements OnInit {
        console.log( this.events[0].text);
   });
 
+}
+
+
+openPayment(){
+  this.dialog.open(PaymentComponent);
 }
   }

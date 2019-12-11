@@ -1,18 +1,26 @@
 @import "./../../scss/variable";
 @import "./../../scss/mixin";
+
+
 .container{
   margin-left: 37px;
   margin-top: 100px;
 }
+// width for all dof images
+
 .dogimage{
   width: 100%;
 }
+
+// font for contents in card
 .card {
   // max-width: 300px;
   margin: auto;
   //text-align: center;
   font-family: arial;
 }
+
+// styling for animal header and added mixins
 .animalheader{
   font-family: monospace;
   @include contentsize(35px);
@@ -23,12 +31,16 @@
   // width: 50%;
   background-color:  $content-color;
 }
+
+
 .animaldesc{
   font-family: monospace;
   @include contentsize(15px);
   //font-size: 15px;
   font-weight: small;
 }
+
+// added color and style for visited link
 a:link, a:visited {
   background-color: $content-color;
   color: white;
@@ -38,9 +50,12 @@ a:link, a:visited {
   display: inline-block;
 }
 
+// styyling for hover
 a:hover, a:active {
   background-color:rgb(238, 227, 227);
 }
+
+// styling exaple card
 .example-card {
   // max-width: 400px;
   margin-left: -12px;
