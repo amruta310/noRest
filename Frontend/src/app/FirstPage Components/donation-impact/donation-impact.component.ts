@@ -22,7 +22,11 @@ export class DonationImpactComponent implements OnInit {
   veterinarycarecount: number;
   
   
-
+/**
+ * 
+ * @param _http this is used for server and data connection and CRUD methods
+ * @param sanitizer 
+ */
   constructor(private _http : HttpService, public sanitizer: DomSanitizer) {
     
     this.countStatus=0;
