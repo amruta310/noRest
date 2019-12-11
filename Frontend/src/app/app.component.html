@@ -1,3 +1,5 @@
+<div class="main">
+
 
 <header>
   <app-header (goodToload)="getDashboard($event)" (openHome)="openHome()" class="header"></app-header>
@@ -13,6 +15,7 @@
 
 <div class="container">
   <router-outlet *ngIf="openDashboardPage"></router-outlet>
+</div>
 </div>
 
 <footer>

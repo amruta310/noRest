@@ -67,7 +67,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AskquestionComponent,
     AboutusComponent,
     GoogleMapsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AboutusComponent
   ],
   imports: [
     MbscModule,
@@ -95,6 +96,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 
     MatGridListModule,
     MatExpansionModule,
+
     NgCircleProgressModule.forRoot({}),
     AgmCoreModule.forRoot({
       apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
