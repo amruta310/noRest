@@ -66,11 +66,9 @@
  </div>
 
 
-<a href="#" class="scrollup">
-  <button *ngIf="showScrollButton"
-      type="button" class="btn btn-primary btn-block pull-right">
-           <i class="glyphicon glyphicon-chevron-up" ></i>
-  </button>
-</a>
+ <div style="float: right;right: 0;">
+  <button *ngIf="isShow" (click)="gotoTop()">👆</button>
+  </div>
 
 </div>
+

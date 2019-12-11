@@ -18,14 +18,21 @@
             Adopt
           </a>
         </li>
+
         <li *ngIf="isLoggedIn == ''"><a (click)="openDashboard($event)" [routerLink]="['/animal']" mat-button class="loginBtn">
           Adopt
         </a>
       </li>
-        <li> <a [routerLink]="['/aboutUs']" mat-button class="loginBtn" (click)="setShowMe()">
+   <!--      <li> <a [routerLink]="['/orderhistory']" mat-button class="loginBtn" (click)="setShowMe()">
             About Us
-          </a></li>
-        <li><a [routerLink]="['/events']"  (click)="setShowMe()" mat-button class="loginBtn">
+          </a></li> -->
+
+        <li> <a [routerLink]="['/aboutUs']"> About </a>
+
+
+        </li>
+        <li><a [routerLink]="['/events']" mat-button class="loginBtn">
+
             Events
           </a></li>
       </ul>
@@ -54,6 +61,17 @@
                   <a [routerLink]="['/events']" mat-button  (click)="setShowMe()" class="loginBtn">
                     Events
                   </a> <br><br>
+                      <a href="https://www.instagram.com/arlboston/" class="icon-link">
+                       <i class="fab fa-instagram"></i>
+                      </a>
+
+                      <a href="https://www.facebook.com/AnimalRescueLeagueofBoston"  class="icon-link">
+                       <i class="fab fa-facebook"></i>
+                      </a>
+
+                      <a href="https://twitter.com/ARLBostonRescue"  class="icon-link">
+                        <i class="fab fa-twitter-square"></i>
+                       </a>
 
                 </ul>
               </div>
