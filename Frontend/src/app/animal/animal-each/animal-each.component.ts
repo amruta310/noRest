@@ -14,9 +14,22 @@ export interface DialogData {
 export class AnimalEachComponent implements OnInit {
   @Input() animalEach: Animal;
   @Output() divClicked = new EventEmitter<any>();
+  breed: string;
+  gender: string;
+  age: string;
+  health: string;
+  description: string;
+  name: string;
+  image: string;
   constructor(public dialogRef: MatDialogRef<AnimalEachComponent>, @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
   public sanitizer: DomSanitizer ) {
       this.animalEach = data.animalEach;
+      this.breed = data.animalEach.breed;
+      this.gender = data.animalEach.gender;
+      this.health = data.animalEach.health;
+      this.description = data.animalEach.description;
+      this.name = data.animalEach.name;
+      this.image = data.animalEach.image;
   }
 
   ngOnInit() {

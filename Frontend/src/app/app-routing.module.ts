@@ -18,8 +18,7 @@ import { ViewanimalComponent } from './animal/viewanimal/viewanimal.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
- // { path: '', component: DashboardViewComponent },
-  { path: '', component: HomeComponent },
+  { path: '', component: AppComponent },
   { path: 'events', component: EventCalendarComponent },
   { path: 'donation', component: DonationComponent},
   { path: 'animal', component: AnimalComponent },
