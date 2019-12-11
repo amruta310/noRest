@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpService } from '../../http.service';
-
+import { Question } from '../../../../../Backend/api/models/askQuestion';
 @Component({
   selector: 'app-askquestion',
   templateUrl: './askquestion.component.html',
