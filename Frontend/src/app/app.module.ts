@@ -37,7 +37,8 @@ import { PaymentComponent } from './payment/payment.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AskquestionComponent } from './animal/askquestion/askquestion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EventCalendarComponent,
     PaymentComponent,
     AskquestionComponent,
-    AboutusComponent
+    AboutusComponent,
+    GoogleMapsComponent
   ],
   imports: [
     MbscModule,
@@ -82,6 +84,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     MatGridListModule,
     MatExpansionModule,
     NgCircleProgressModule.forRoot({}),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyDGwNx3tcfdRexa1qJJOa15uaFBhK-nDFQ',
+     }),
   ],
   bootstrap: [AppComponent]
 })

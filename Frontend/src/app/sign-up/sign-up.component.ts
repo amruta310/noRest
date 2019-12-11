@@ -56,6 +56,14 @@ export class SignUpComponent implements OnInit {
     }
     if(this.email == undefined || this.email == "") {
       alert("Please enter a value in password.");
+      return;
+    }
+    else{
+      alert("Please enter correct email address");
+      return;
+    }
+    if(this.dateOfBirth == undefined || this.dateOfBirth == "") {
+      alert("Please enter a date.");
         return;
     }
 
@@ -69,6 +77,15 @@ export class SignUpComponent implements OnInit {
       });
     }
   }
+
+  isEmail(search:string):boolean
+    {
+        let serchfind:boolean;
+        let regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        serchfind = regexp.test(search);
+        console.log(serchfind)
+        return serchfind
+    }
 
   onNoClick(): void {
     this.dialogRef.close();

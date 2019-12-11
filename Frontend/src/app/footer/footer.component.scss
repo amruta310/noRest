@@ -5,6 +5,7 @@
    margin-top: 50px;
    font-size: 20px;
 
+
    .header,.city {
 
     font-weight: bolder;
@@ -17,7 +18,7 @@
 .grid {
 
  display: grid;
- grid-template-columns: 450px 450px 450px;
+ grid-template-columns: 430px 430px 430px;
  margin-top: 20px;
  margin-bottom: 20px;
 
@@ -25,6 +26,20 @@
 
       color: darkgrey;
       font-size: 14px;
+
+    a:link, a:visited {
+
+      color : darkgrey;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+
+        color : red;
+
+    }
+
 }
 
 // styling icon

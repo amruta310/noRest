@@ -1,3 +1,4 @@
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'aboutUs', component: AboutusComponent},
   { path: 'contactUs', component: ContactUsComponent},
   { path: 'payment/:donationAmount', component: PaymentComponent},
+  { path: 'maps', component: GoogleMapsComponent}
 ];
 
 @NgModule({
