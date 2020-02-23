@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/neu-mis-info6150-fall-2019/final-project-norest.git"
+        "url": "git+https://github.com/amruta310/noRest.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest/issues"
+        "url": "https://github.com/amruta310/noRest.git/issues"
     },
-    "homepage": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest#readme",
+    "homepage": "https://github.com/amruta310/noRest.git#readme",
     "dependencies": {
         "@angular/compiler-cli": "^8.2.14",
         "@mobiscroll/angular": "https://npm.mobiscroll.com/@mobiscroll/angular-trial/-/angular-trial-4.9.0.tgz",

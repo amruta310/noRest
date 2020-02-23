@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neu-mis-info6150-fall-2019/final-project-norest.git"
+    "url": "git+https://github.com/amruta310/noRest.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest/issues"
+    "url": "https://github.com/amruta310/noRest.git/issues"
   },
-  "homepage": "https://github.com/neu-mis-info6150-fall-2019/final-project-norest#readme",
+  "homepage": "https://github.com/amruta310/noRest.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
